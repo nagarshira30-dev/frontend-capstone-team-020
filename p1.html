@@ -1,11 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rare Items Store - קטלוג</title>
+    <link rel="stylesheet" href="page2.css">
 </head>
 <body>
-    <h1></h1>
+
+    <header>
+        <div class="header-container">
+            <h1>Rare Items Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">דף הבית</a></li>
+                    <li><a href="#" class="active">קטלוג</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">עגלת קניות</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="filters" aria-label="מערכת מיון וסינון">
+            <div class="filter-group">
+                <label for="category-filter">סנן לפי קטגוריה:</label>
+                <select id="category-filter">
+                    <option value="all">הכל</option>
+                    <option value="clothing">ביגוד</option>
+                    <option value="furniture">ריהוט</option>
+                </select>
+                <button class="btn-primary" aria-label="בצע סינון">סנן פריטים</button>
+            </div>
+        </section>
+
+        <div class="product-grid" id="product-container">
+            
+            <article class="product-card" data-category="clothing">
+                <div class="badge rarity">נדיר מאוד</div>
+                <img src="./buffet.png" alt="מעיל צמר וינטג'">
+                <div class="card-content">
+                    <h3>מעיל צמר וינטג'</h3>
+                    <p class="price">₪850</p>
+                    <div class="actions">
+                        <button class="btn-wishlist" aria-label="הוסף לרשימת משאלות">❤</button>
+                        <button class="btn-add" aria-label="הוסף לעגלת קניות">הוסף לעגלה</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="furniture">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500" alt="ספת קטיפה חומה">
+                <div class="card-content">
+                    <h3>ספת קטיפה חומה</h3>
+                    <p class="price">₪3,200</p>
+                    <div class="actions">
+                        <button class="btn-wishlist" aria-label="הוסף לרשימת משאלות">❤</button>
+                        <button class="btn-add" aria-label="הוסף לעגלת קניות">הוסף לעגלה</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="clothing">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=500" alt="שמלת פשתן בז'">
+                <div class="card-content">
+                    <h3>שמלת פשתן בז'</h3>
+                    <p class="price">₪420</p>
+                    <div class="actions">
+                        <button class="btn-wishlist" aria-label="הוסף לרשימת משאלות">❤</button>
+                        <button class="btn-add" aria-label="הוסף לעגלת קניות">הוסף לעגלה</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="furniture">
+                <div class="badge out-of-stock">לא זמין</div>
+                <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=500" alt="שולחן עץ אלון">
+                <div class="card-content">
+                    <h3>שולחן עץ אלון</h3>
+                    <p class="price">₪1,150</p>
+                    <div class="actions">
+                        <button class="btn-wishlist" aria-label="הוסף לרשימת משאלות">❤</button>
+                        <button class="btn-add disabled" disabled aria-label="פריט לא זמין">אזל מהמלאי</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="clothing">
+                <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500" alt="ג'קט עור קלאסי">
+                <div class="card-content">
+                    <h3>ג'קט עור קלאסי</h3>
+                    <p class="price">₪1,200</p>
+                    <div class="actions">
+                        <button class="btn-wishlist" aria-label="הוסף לרשימת משאלות">❤</button>
+                        <button class="btn-add" aria-label="הוסף לעגלת קניות">הוסף לעגלה</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="furniture">
+                <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?w=500" alt="כיסא מעוצב">
+                <div class="card-content">
+                    <h3>כיסא מעוצב נדיר</h3>
+                    <p class="price">₪680</p>
+                    <div class="actions">
+                        <button class="btn-wishlist" aria-label="הוסף לרשימת משאלות">❤</button>
+                        <button class="btn-add" aria-label="הוסף לעגלת קניות">הוסף לעגלה</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>© 1995 Rare Items Store - חנות לפריטים נדירים</p>
+    </footer>
+
 </body>
 </html>
