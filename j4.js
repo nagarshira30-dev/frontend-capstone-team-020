@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <nav class="sidebar__nav">
-        <a href="#clothes">בגדים</a>
-        <a href="#design">עיצוב</a>
-        <a href="#sale">סייל</a>
+        <a href="#clothes">Clothes</a>
+        <a href="#design">Design</a>
+        <a href="#sale">Sale
       </nav>
 
       <div class="sidebar__footer">
@@ -111,6 +111,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Enter") runSearch();
     if (e.key === "Escape") closeSearch();
   });
+
+  const logoBtn = document.getElementById("logoBtn");
+
+logoBtn.addEventListener("click", () => {
+  window.location.href = "/";
+});
+
 
   searchGo?.addEventListener("click", runSearch);
 

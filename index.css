@@ -81,6 +81,26 @@ body{
   object-fit: cover;
   display:block;
 }
+.logo-btn{
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-btn img{
+  width: 44px;           
+  height: 44px;
+  border-radius: 50%;
+  display: block;
+   
+  
+}
+
 
 /* Icon Buttons */
 .icon-btn{
@@ -153,14 +173,13 @@ body{
 
 .card > *{ position:relative; }
 
-.card__kicker{
-  margin: 0 0 10px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: rgba(89,110,121,0.85);
-  font-weight: 700;
-  font-size: 12px;
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
+
 
 .card__title{
   margin: 0 0 12px;
@@ -224,17 +243,8 @@ body{
   box-shadow: 0 16px 40px rgba(201,162,39,0.28);
 }
 
-.btn--ghost{
-  background: rgba(255,255,255,0.62);
-  color: rgba(28,34,38,0.85);
-  border-color: rgba(89,110,121,0.22);
-}
 
-.btn--ghost:hover{
-  transform: translateY(-1px);
-  border-color: rgba(201,162,39,0.4);
-  box-shadow: var(--shadow-soft);
-}
+
 
 .btn:focus{
   outline:none;
@@ -249,13 +259,10 @@ body{
 }
 
 .chip{
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(89,110,121,0.18);
-  background: rgba(255,255,255,0.55);
-  color: rgba(28,34,38,0.70);
+  margin: 0 0 8px;
+  font-size: 18px;
   font-weight: 700;
-  font-size: 12px;
+  color: rgba(28,34,38,0.82);
 }
 
 /* Footer */
