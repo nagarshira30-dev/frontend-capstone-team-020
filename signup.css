@@ -466,3 +466,9 @@ img{ max-width:100%; display:block; }
   .pill-btn{ display:none; } /* אם צפוף */
   .hero{ padding: 34px 16px; }
 }
+
+.signup-box{
+   position: absolute;
+      left: 40%;
+      width: 25%;
+}

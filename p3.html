@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>one of one\signup</title>
-    <link rel="stylesheet" href="siganup.css">
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
    
@@ -78,38 +78,53 @@
     </ul>
   </aside>
 
+  <!--signup code-->
     <hr>
      <form action="/signup" method="post" autocomplete="on">
-        <fieldset>
+        <fieldset class="signup-box">
             <legend>create acount</legend>
 
-            <div>
+            <div class="name">
                 <label for="name">Full name:</label>
                 <input type="text" name="name" required autocomplete="name" placeholder="Israel Israeli">
             </div>
 
-            <div>  
+            <div class="email">  
                 <label for="email">Email:</label>
                 <input type="text" name="email" required autocomplete="email">
             </div>
 
-            <div>
-                <label for="country">country</label>
-                <select name="country" required>
-                    <option value="">Choose..</option>
-                    <optgroup label="Europe">
-                        <option value="pt">Portogal</option>
-                        <option value="uk">United kingdom</option>
-                    </optgroup>
-                    <optgroup label="Asia">
-                        <option value="il">Israel</option>
-                    </optgroup>
-                </select>
+            <div class="password">
+            <label for="new password">password: </label>
+            <input type="text" name="password">
             </div>
 
-            <div>
-                <button type="submit">Sign up</button>
-                <button type="button" onclick="alert('You are now signup!')">Preview</button>
+            <div class="phone">
+              <label for="phone">phone number:</label>
+              <input type="int" name="phone" required autocomplete="phone number">
+            </div>
+
+            <div class="adrass">
+              <div>
+                <label for="city">city:</label>
+                <input type="text" name="city" required autocomplete="city-address">
+              </div>
+              <div>
+                <label for="street">street:</label>
+                <input type="text" name="street"required autocomplete="street-address">
+              </div>
+              <div>
+                <label for="house number">house number:</label>
+                <input type="text" name="house number" required autocomplete="house number">
+              </div>
+              <div>
+                <label for="zip">zip:<code></code></label>
+                <input type="text" name="zip" required autocomplete="zip">
+              </div>
+            </div>
+           
+            <div class="button">
+                <button type="submit"onclick="alert('You are now signup!')">Sign up</button>
             </div>
         </fieldset>
 
