@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>one of one\signup</title>
     <link rel="stylesheet" href="signup.css">
+    <script src="j3.js" defer></script>
 </head>
 <body>
    
@@ -78,6 +79,8 @@
     </ul>
   </aside>
 
+
+
   <!--signup code-->
     <hr>
      <form action="/signup" method="post" autocomplete="on">
@@ -95,39 +98,41 @@
             </div>
 
             <div class="password">
-            <label for="new password">password: </label>
-            <input type="text" name="password">
+            <label for="new password">Password: </label>
+            <input type="password" id="password" name="password">
             </div>
 
             <div class="phone">
-              <label for="phone">phone number:</label>
+              <label for="phone">Phone number:</label>
               <input type="int" name="phone" required autocomplete="phone number">
             </div>
 
             <div class="adrass">
               <div>
-                <label for="city">city:</label>
-                <input type="text" name="city" required autocomplete="city-address">
+                <label for="city">City:</label>
+                <input type="text" name="city" required autocomplete="address-level2">
               </div>
               <div>
-                <label for="street">street:</label>
+                <label for="street">Street:</label>
                 <input type="text" name="street"required autocomplete="street-address">
               </div>
               <div>
-                <label for="house number">house number:</label>
+                <label for="house number">House number:</label>
                 <input type="text" name="house number" required autocomplete="house number">
               </div>
               <div>
-                <label for="zip">zip:<code></code></label>
-                <input type="text" name="zip" required autocomplete="zip">
+                <label for="zip">Zip:<code></code></label>
+                <input type="text" name="zip" required autocomplete="postal-code">
               </div>
             </div>
            
             <div class="button">
-                <button type="submit"onclick="alert('You are now signup!')">Sign up</button>
+              <button type="button" id="registerBtn">Signup</button>
+              <p id="message"></p>
             </div>
         </fieldset>
 
     </form>
+    
 </body>
 </html>
