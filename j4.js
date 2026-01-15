@@ -25,3 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === sidebar) sidebar.classList.remove('is-open');
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const loginButton = document.getElementById('loginBtn');
+    if (loginButton) {
+        loginButton.addEventListener('click', () => {
+            window.location.href = 'p3.html';
+        });
+    }
+});
