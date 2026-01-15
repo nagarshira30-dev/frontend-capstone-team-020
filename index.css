@@ -1,7 +1,5 @@
 /* הגדרות צבעים ומשתנים */
-
 :root {
-
   --bg-main: #fdfdfb;       /* לבן שמנת */
   --primary-brown: #5d4037;  /* חום עמוק */
   --accent-beige: #d2b48c;   /* בז' */
@@ -9,19 +7,15 @@
   --text-dark: #3e2723;      /* חום כהה לטקסט */
   --white: #ffffff;
   --radius-xl: 22px;
-
 }
 
 * {
-
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
 }
 
 body {
-
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   background-color: var(--bg-main);
   color: var(--text-dark);
@@ -40,23 +34,19 @@ body {
 }
 
 .topbar__inner {
-  max-width: 1200px;
+  max-width:100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-
 
 .topbar__right, .topbar__left {
   display: flex;
   gap: 12px;
   align-items: center;
 }
-
-
 
 .icon-btn {
   width: 40px;
@@ -72,12 +62,10 @@ body {
   transition: all 0.3s ease;
 }
 
-
 .icon-btn:hover {
   background: var(--gold);
   color: var(--primary-brown);
 }
-
 
 .brand__logo {
   width: 55px;
@@ -91,15 +79,13 @@ body {
   justify-content: center;
 }
 
-
 .brand__logo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-
-/* --- Sidebar (תפריט צד) --- */
+/* --- Sidebar --- */
 .sidebar {
   position: fixed;
   inset: 0;
@@ -111,17 +97,15 @@ body {
   z-index: 2000;
 }
 
-
 .sidebar.is-open {
   opacity: 1;
   pointer-events: auto;
 }
 
-
 .sidebar__panel {
   position: absolute;
   top: 0;
-  right: -320px; /* מתחיל מחוץ למסך */
+  right: -320px;
   width: 320px;
   height: 100%;
   background: var(--bg-main);
@@ -129,7 +113,6 @@ body {
   transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: -5px 0 20px rgba(0,0,0,0.2);
 }
-
 
 .sidebar.is-open .sidebar__panel {
   right: 0;
@@ -142,13 +125,11 @@ body {
   margin-bottom: 40px;
 }
 
-
 .sidebar__title {
   font-weight: 800;
   color: var(--primary-brown);
   font-size: 1.2rem;
 }
-
 
 .sidebar__close {
   background: #f0f0f0;
@@ -158,7 +139,6 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
-
 
 .sidebar__nav a {
   display: block;
@@ -172,17 +152,15 @@ body {
   transition: 0.2s;
 }
 
-
 .sidebar__nav a:hover {
   background: var(--accent-beige);
   color: white;
 }
 
-
-/* --- Searchbar (שורת חיפוש) --- */
+/* --- Searchbar --- */
 .searchbar {
   position: fixed;
-  top: -150px; /* מתחיל מעל המסך */
+  top: -150px;
   left: 0;
   width: 100%;
   background: var(--bg-main);
@@ -193,11 +171,9 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-
 .searchbar.is-open {
   top: 0;
 }
-
 
 .searchbar__panel {
   max-width: 800px;
@@ -207,7 +183,6 @@ body {
   align-items: center;
 }
 
-
 .searchbar__input {
   flex: 1;
   padding: 12px 25px;
@@ -216,7 +191,6 @@ body {
   outline: none;
   font-size: 1rem;
 }
-
 
 .searchbar__go {
   background: var(--gold);
@@ -228,8 +202,6 @@ body {
   cursor: pointer;
 }
 
-
-
 .searchbar__close {
   background: #f0f0f0;
   border: none;
@@ -238,8 +210,6 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
-
-
 
 /* --- Hero & Card --- */
 .hero {
@@ -250,7 +220,6 @@ body {
   padding: 40px 20px;
 }
 
-
 .card {
   background: white;
   padding: 50px 40px;
@@ -258,30 +227,28 @@ body {
   text-align: center;
   box-shadow: 0 15px 40px rgba(0,0,0,0.05);
   border: 1px solid var(--accent-beige);
-  max-width: 650px;
+  max-width: 900px; /* הגדלתי כדי שיהיה מקום למשפט */
+  width: fit-content; /* מתאים את עצמו לתוכן */
   position: relative;
 }
-
 
 .card__title {
   font-size: clamp(2rem, 5vw, 3.5rem);
   color: var(--primary-brown);
   margin-bottom: 15px;
+  white-space: nowrap; /* מונע ירידת שורה */
 }
-
 
 .gold {
   color: var(--gold);
   font-weight: 900;
 }
 
-
 .card__subtitle {
   font-size: 1.2rem;
   opacity: 0.8;
   margin-bottom: 30px;
 }
-
 
 .btn--primary {
   display: inline-block;
@@ -294,12 +261,10 @@ body {
   transition: 0.3s;
 }
 
-
 .btn--primary:hover {
   background: var(--gold);
   transform: translateY(-3px);
 }
-
 
 .card__chips {
   margin-top: 30px;
@@ -307,7 +272,6 @@ body {
   justify-content: center;
   gap: 12px;
 }
-
 
 .chip {
   background: #f4f1ea;
@@ -318,10 +282,31 @@ body {
   font-weight: 600;
 }
 
-
 .footer {
   text-align: center;
   padding: 30px;
   opacity: 0.6;
   font-size: 0.9rem;
+}
+
+/* --- רספונסיביות --- */
+
+@media (max-width: 1024px) {
+  .topbar__inner { max-width: 100%; }
+  .card__title { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+  .card { padding: 35px 25px; max-width: 95%; }
+  .card__title { 
+    font-size: 2.2rem; 
+    white-space: normal; /* בטאבלט ומטה נרצה שיעלה שורה אם אין ברירה */
+  }
+}
+
+@media (max-width: 480px) {
+  .brand__logo { width: 45px; height: 45px; }
+  .card__title { font-size: 1.8rem; }
+  .btn--primary { width: 100%; }
+  .searchbar__panel { flex-direction: column; }
 }
