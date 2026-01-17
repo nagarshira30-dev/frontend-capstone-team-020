@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One of One — Find the Unfindable</title>
+
+
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__right">
+        <button class="icon-btn" id="menu-toggle" aria-label="תפריט">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <button class="icon-btn" id="search-toggle" aria-label="חיפוש">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <a class="brand" href="#">
+        <div class="brand__logo">
+          <img src="./assets/logo.png" alt="One of One Logo">
+        </div>
+      </a>
+
+
+      <div class="topbar__left">
+        <button class="icon-btn" aria-label="עגלה">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+        <button class="icon-btn" aria-label="מועדפים">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+
+        <button id="loginBtn" class="icon-btn " aria-label="התחברות">
+          <i class="fa-solid fa-user"></i>
+          <a href="/p3.html"></a>
+      
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__panel">
+      <div class="sidebar__header">
+        <button class="sidebar__close" id="sidebar-close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <span class="sidebar__title">Categories</span>
+      </div>
+      <nav class="sidebar__nav">
+        <a href="#">Clothes</a>
+        <a href="#">Design</a>
+        <a href="#">Sale</a>
+      </nav>
+    </div>
+  </aside>
+
+
+  <div class="searchbar" id="searchbar">
+    <div class="searchbar__panel">
+
+      <button class="searchbar__close" id="search-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <button class="searchbar__go">חפש</button>
+      <input type="text" class="searchbar__input" placeholder="חיפוש פריטים נדירים...">
+    </div>
+  </div>
+
+
+  <main class="hero">
+    <section class="card">
+      <h1 class="card__title">
+        Welcome to <span class="gold">One of One</span>
+      </h1>
+      <p class="card__subtitle">Find the Unfindable</p>
+
+
+      <div class="card__actions">
+        <a class="btn--primary" href="#">View the collection</a>
+      </div>
+
+
+      <div class="card__chips">
+        <span class="chip">Vintage</span>
+        <span class="chip">Rare Finds</span>
+        <span class="chip">Curated</span>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="footer">
+    <p>© One of One — Find the Unfindable</p>
+  </footer>
+
+  <script src="j4.js"></script>
+
+</body>
+
+</html>
