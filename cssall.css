@@ -185,21 +185,17 @@ body {
 
 /* --- Searchbar --- */
 .searchbar {
-  /* position: fixed; */
-  /* top: -150px; */
-  /* left: 0; */
+
   width: 100%;
-  /* background: var(--bg-main); */
+
   padding: 20px;
   transition: 0.4s ease;
   z-index: 1500;
   display: none;
-  /* border-bottom: 3px solid var(--gold); */
-  /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
+
 }
 
 .searchbar.is-open {
-  /* top: 0; */
   display: block;
 }
 
@@ -242,76 +238,6 @@ body {
   display:none;
 }
 
-/* --- Hero & Card --- */
-.hero {
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-}
-
-.card {
-  background: white;
-  padding: 50px 40px;
-  border-radius: var(--radius-xl);
-  text-align: center;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
-  border: 1px solid var(--accent-beige);
-  max-width: 900px; /* הגדלתי כדי שיהיה מקום למשפט */
-  width: fit-content; /* מתאים את עצמו לתוכן */
-  position: relative;
-}
-
-.card__title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  color: var(--primary-brown);
-  margin-bottom: 15px;
-  white-space: nowrap; /* מונע ירידת שורה */
-}
-
-.gold {
-  color: var(--gold);
-  font-weight: 900;
-}
-
-.card__subtitle {
-  font-size: 1.2rem;
-  opacity: 0.8;
-  margin-bottom: 30px;
-}
-
-.btn--primary {
-  display: inline-block;
-  padding: 15px 40px;
-  background: var(--primary-brown);
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn--primary:hover {
-  background: var(--gold);
-  transform: translateY(-3px);
-}
-
-.card__chips {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
-.chip {
-  background: #f4f1ea;
-  color: var(--primary-brown);
-  padding: 6px 18px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
 
 .footer {
   text-align: center;
