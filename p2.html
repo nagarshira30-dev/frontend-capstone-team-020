@@ -1,13 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
+<head><!DOCTYPE html>
+<html lang="he" dir="rtl">
 <head>
-    <h1>maayan</h1>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>חנות הבגדים שלי</title>
+    <link rel="stylesheet" href="body {.css">
 </head>
 <body>
-    
+
+    <div class="cart-container">
+        <h2>סל הקניות שלי</h2>
+        
+        <div id="cart-items">
+            <div class="cart-item" data-price="100">
+                <img src="https://via.placeholder.com/70" alt="פריט 1">
+                <div class="item-info">
+                    <span class="item-name">חולצת פרימיום</span>
+                    <span class="item-rarity">נדירות: נדיר מאוד</span>
+                    <span class="price">100$</span>
+                </div>
+                <button class="remove-btn" onclick="removeItem(this)">🗑️</button>
+            </div>
+
+            <div class="cart-item" data-price="100">
+                <img src="https://via.placeholder.com/70" alt="פריט 2">
+                <div class="item-info">
+                    <span class="item-name">מכנסי אלגנט</span>
+                    <span class="item-rarity">נדירות: נדיר מאוד</span>
+                    <span class="price">100$</span>
+                </div>
+                <button class="remove-btn" onclick="removeItem(this)">🗑️</button>
+            </div>
+        </div>
+
+        <div class="summary">
+            <div class="summary-row">
+                <span>עלות משלוח:</span>
+                <span>$<span id="shipping-cost">20</span></span>
+            </div>
+            <div class="summary-row total-row">
+                <span>סה"כ:</span>
+                <span>$<span id="total-sum">220</span></span>
+            </div>
+            <button class="checkout-btn">עבור לתשלום</button>
+        </div>
+    </div>
+
+    <script src="function updateCart() {.js"></script>
 </body>
 </html>
