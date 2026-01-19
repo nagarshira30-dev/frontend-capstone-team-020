@@ -1,5 +1,5 @@
 window.onload = function() {
-    console.log("הדף נטען!");
+    console.log("הfדף נטען!");
 
     const form = document.getElementById('payment-form');
     
