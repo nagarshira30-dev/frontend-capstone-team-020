@@ -71,4 +71,34 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'p3.html';
         });
     }
+    const loginMobileBtn = document.getElementById('loginMobileBtn');
+    if (loginMobileBtn) {
+        loginMobileBtn.addEventListener('click', () => {
+            window.location.href = 'p3.html';
+        });
+    }
+    const cartBtn = document.getElementById('cartBtn');
+    if (cartBtn) {
+        cartBtn.addEventListener('click', () => {
+            window.location.href = 'p2.html';
+        });
+    }
+    const cartMobileBtn = document.getElementById('cartMobileBtn');
+    if (cartMobileBtn) {
+        cartMobileBtn.addEventListener('click', () => {
+            window.location.href = 'p2.html';
+        });
+    }
+    const likesBtn = document.getElementById('likesBtn');
+    if (likesBtn) {
+        likesBtn.addEventListener('click', () => {
+            window.location.href = 'p4.html';
+        });
+    }
+    const likesMobileBtn = document.getElementById('likesMobileBtn');
+    if (likesMobileBtn) {
+        likesMobileBtn.addEventListener('click', () => {
+            window.location.href = 'p4.html';
+        });
+    }
 });

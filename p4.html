@@ -36,48 +36,47 @@
 
 
       <div class="topbar__left">
-        <button class="icon-btn" aria-label="עגלה">
+        <button id="cartBtn" class="icon-btn" aria-label="עגלה">
           <i class="fa-solid fa-cart-shopping"></i>
+          <a href="/p2.html"></a>
         </button>
 
-        <button class="icon-btn" aria-label="מועדפים">
+        <button id="likesBtn" class="icon-btn" aria-label="מועדפים">
           <i class="fa-solid fa-heart"></i>
         </button>
 
         <button id="loginBtn" class="icon-btn " aria-label="התחברות">
           <i class="fa-solid fa-user"></i>
-          <a href="/p3.html"></a>
-
         </button>
       </div>
       <button id="caret-mobile" class="icon-btn " aria-label="התחברות">
         <i class="fa-solid fa-caret-down"></i>
       </button>
-
     </div>
   </header>
-<div class="mobile-menu-container">
-      <div class="mobile-menu">
-        <button class="icon-btn" aria-label="עגלה">
-          <i class="fa-solid fa-cart-shopping"></i>
-        </button>
 
-        <button class="icon-btn" aria-label="מועדפים">
-          <i class="fa-solid fa-heart"></i>
-        </button>
+  <div class="mobile-menu-container">
+    <div class="mobile-menu">
+      <button id="cartMobileBtn" class="icon-btn" aria-label="עגלה">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
 
-        <button id="loginBtn" class="icon-btn " aria-label="התחברות">
-          <i class="fa-solid fa-user"></i>
-          <a href="/p3.html"></a>
-        </button>
-        <button class="icon-btn" id="search-toggle-mobile" aria-label="חיפוש">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <button class="icon-btn" id="dark-mode-toggle-mobile" aria-label="חיפוש">
-          <i id="dark-mode" class="fa-solid fa-moon"></i>
-        </button>
-      </div>
+      <button id="likesMobileBtn" class="icon-btn" aria-label="מועדפים">
+        <i class="fa-solid fa-heart"></i>
+      </button>
+
+      <button id="loginMobileBtn" class="icon-btn " aria-label="התחברות">
+        <i class="fa-solid fa-user"></i>
+        <a href="/p3.html"></a>
+      </button>
+      <button class="icon-btn" id="search-toggle-mobile" aria-label="חיפוש">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <button class="icon-btn" id="dark-mode-toggle-mobile" aria-label="חיפוש">
+        <i id="dark-mode" class="fa-solid fa-moon"></i>
+      </button>
     </div>
+  </div>
   <aside class="sidebar" id="sidebar">
     <div class="sidebar__panel">
       <div class="sidebar__header">
@@ -87,9 +86,9 @@
         <span class="sidebar__title">Categories</span>
       </div>
       <nav class="sidebar__nav">
-        <a href="#">Clothes</a>
-        <a href="#">Design</a>
-        <a href="#">Sale</a>
+        <a href="p1.html">Clothes</a>
+        <a href="p5.html">Design</a>
+        <a href="p4.html">Sale</a>
       </nav>
     </div>
   </aside>
@@ -113,7 +112,11 @@
         Welcome to <span class="gold">One of One</span>
       </h1>
       <p class="card__subtitle">Find the Unfindable</p>
-
+      <p class="card__content">Curated vintage pieces, rare finds, and timeless treasures.</p>
+      <p class="card__content">
+        
+Each item is carefully selected for its story, character, and uniqueness — because true style is one of a kind.
+      </p>
 
       <div class="card__actions">
         <a class="btn--primary" href="#">View the collection</a>
@@ -130,7 +133,31 @@
 
 
   <footer class="footer">
-    <p>© One of One — Find the Unfindable</p>
+    <div class="footer__contact">
+      <div>
+        <h3>Customer service</h3>
+        <p>Sunday to Thrusday: 09:00 - 17:00</p>
+      </div>
+      <div class="footer__contact__middle">
+        <i aria-hidden="true" class="fab fa-facebook-f"></i>
+        <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+        <i aria-hidden="true" class="fab fa-instagram"></i>
+      </div>
+      <div class="footer__contact__newsletter">
+        <p>Register the newsletter</p>
+        <p>and stay updated</p>
+        <div>
+          <input style="direction:ltr" type="text" placeholder="your email">
+          <button>
+            <i class="fa-solid fa-greater-than"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright">
+
+      <p>© One of One — Find the Unfindable</p>
+    </div>
   </footer>
 
   <script src="j4.js"></script>
