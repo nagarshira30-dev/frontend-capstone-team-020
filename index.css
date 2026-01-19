@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 /* הגדרות צבעים ומשתנים */
 :root {
   --bg-main: #fdfdfb;       /* לבן שמנת */
@@ -106,6 +108,8 @@ body {
   text-decoration: none;
   color: white;
   text-align: center;
+  font-family: "Playfair Display", serif;
+
 }
 .brand > span{
   font-size: smaller;
@@ -186,21 +190,14 @@ body {
 
 /* --- Searchbar --- */
 .searchbar {
-  /* position: fixed; */
-  /* top: -150px; */
-  /* left: 0; */
   width: 100%;
-  /* background: var(--bg-main); */
   padding: 20px;
   transition: 0.4s ease;
   z-index: 1500;
   display: none;
-  /* border-bottom: 3px solid var(--gold); */
-  /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
 }
 
 .searchbar.is-open {
-  /* top: 0; */
   display: block;
 }
 
@@ -270,22 +267,33 @@ body {
   color: var(--primary-brown);
   margin-bottom: 15px;
   white-space: nowrap; /* מונע ירידת שורה */
+  font-family: "Heebo", sans-serif;
+   font-weight: 600;        /* במקום 700/800 */
+  letter-spacing: 0.5px; 
+
+  
 }
 
 .gold {
   color: var(--gold);
   font-weight: 900;
+    font-family: "Playfair Display", serif;
 }
 
 .card__subtitle {
   font-size: 1.2rem;
-  opacity: 0.8;
+  opacity: 0.75;
   margin-bottom: 30px;
+  font-family: "Playfair Display", serif;
+    letter-spacing: 1px;
+
 }
 .card__content{
   direction: ltr;
   margin-bottom: 30px;
   color: var(--primary-brown);
+    font-family: "Heebo", sans-serif;
+
 }
 
 .btn--primary {
@@ -323,8 +331,8 @@ body {
 .footer {
   text-align: center;
   padding: 30px;
-  /* opacity: 0.6; */
   font-size: 0.9rem;
+
 }
 
 .footer__contact{
@@ -333,22 +341,39 @@ body {
   color: #555;
   width: 100%;
   padding-bottom: 40px;
+  font-family: "Heebo", sans-serif;
+  font-size: 0.9rem;
 }
+.footer p {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
 .footer__contact > div{
   width: 30%;
-  /* min-height: 100%; */
 }
+
 .footer__contact__newsletter{
   display: flex;
   flex-direction: column;
+  
 }
+.footer__contact__newsletter input {
+  border-radius: 20px;   /* מעוגל עדין */
+  padding: 8px 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
 .footer__contact__newsletter >div> button{
+  height: 25px;
   display: inline-block;
   padding: 1px 2px;
   background-color: var(--light-brown);
-  border-radius: 5px;
+  border-radius: 999px;  
   border-color: var(--light-brown);
   outline: none;
+
 }
 .footer__contact__middle{
   border-left: 1px solid var(--primary-brown);
