@@ -1,16 +1,14 @@
-window.onload = function() {
-    console.log("הfדף נטען!");
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("דף התשלום נטען בהצלחה!");
 
     const form = document.getElementById('payment-form');
     
     if (form) {
         form.onsubmit = function(e) {
             e.preventDefault();
-            console.log("הכפתור נלחץ!");
             alert("התשלום בוצע בהצלחה!");
-            window.location.href = 'index.html'; 
+            // המעבר חזרה לדף הבית או לסל
+            window.location.href = 'p2.html'; 
         };
-    } else {
-        console.log("לא מצאתי את הטופס, בדקי את ה-ID");
     }
-};
+});

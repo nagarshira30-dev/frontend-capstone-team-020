@@ -110,13 +110,152 @@ body {
     gap: 15px;
 }
 
+/* ... כל הקוד הקודם שלך עד פה ... */
+
 .back-link {
     display: block;
     text-align: center;
     margin-top: 20px;
-    color: var(--text-muted);
+    color: #666; /* תיקנתי משתנה שלא היה מוגדר */
     text-decoration: none;
+    font-size: 0.9rem;
+} /* השורה הזו הייתה חסרה! */
+
+.back-link:hover { 
+    text-decoration: underline; 
+}
+
+.pay-button {
+    width: 100%;
+    padding: 15px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 999;
+    margin-top: 20px;
+}
+
+.pay-button:hover {
+    background: #444;
+}
+/* עיצוב כללי */
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.checkout-wrapper {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.payment-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.payment-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.payment-header i { font-size: 2rem; color: #2ecc71; margin-bottom: 10px; }
+.payment-header h2 { margin: 10px 0; font-size: 1.5rem; color: #333; }
+.payment-header p { color: #888; font-size: 0.9rem; }
+
+/* עיצוב שדות קלט */
+.input-group { margin-bottom: 20px; display: flex; flex-direction: column; }
+.input-group label { font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; color: #555; }
+.input-group input {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+.input-group input:focus { border-color: #000; outline: none; box-shadow: 0 0 0 2px rgba(0,0,0,0.05); }
+
+.input-row { display: flex; gap: 15px; }
+
+/* עיצוב הכפתורים */
+.button-container { display: flex; flex-direction: column; gap: 12px; margin-top: 10px; }
+
+.pay-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.pay-button:hover { background-color: #333; transform: translateY(-2px); }
+
+.back-btn {
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.back-btn:hover { background-color: #f5f5f5; border-color: #bbb; }
+/* עיצוב כפתור התשלום הראשי - שיהיה זהה לשאר האתר */
+.checkout-btn {
+    width: 100%;
+    padding: 12px;
+    background: #222; /* שחור מודרני */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center;
+    display: block;
+}
+
+.checkout-btn:hover {
+    background: #444; /* שינוי צבע עדין בריחוף */
+}
+
+/* עיצוב כפתור החזרה - שייראה כמו כפתור משני יפה */
+.back-btn {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    color: #222;
+    border: 1px solid #222;
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    box-sizing: border-box; /* מבטיח שהרוחב יהיה מדויק */
     font-size: 0.9rem;
 }
 
-.back-link:hover { text-decoration: underline; }
+.back-btn:hover {
+    background: #f0f0f0;
+}

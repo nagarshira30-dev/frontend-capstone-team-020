@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-<head><!DOCTYPE html>
-<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>חנות הבגדים שלי</title>
+    <title>סל הקניות שלי | Boutique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="body {.css">
 </head>
 <body>
 
     <div class="cart-container">
         <h2>סל הקניות שלי</h2>
-        
-        <div id="cart-items">
-            <div class="cart-item" data-price="100">
-                <div class="item-info">
-                    <span class="item-name">חולצת פרימיום</span>
-                    <span class="item-rarity">תיאור מוצר:
-                    </span>
-                </div>
-                <span class="price">מחיר: 100$</span>
-                <button class="remove-btn" onclick="removeItem(this)">🗑️</button>
+
+        <div class="cart-item">
+            <img src="shirt.png" alt="חולצת פרימיום" class="product-img">
+            
+            <div class="item-info">
+                <span class="item-name">חולצת פרימיום</span>
+                <p class="item-description">תיאור מוצר: חולצה איכותית</p>
+                <span class="price">100$</span>
             </div>
 
-            <div class="cart-item" data-price="100">
-                <div class="item-info">
-                    <span class="item-name">מכנסי אלגנט</span>
-                    <span class="item-rarity">תיאור מוצר</span>
-                </div>
-                <span class="price">מחיר: 100$</span>
-                <button class="remove-btn" onclick="removeItem(this)">🗑️</button>
+            <button class="remove-btn" onclick="this.parentElement.remove()">
+                <i class="fas fa-trash"></i>
+            </button>
+        </div>
+
+        <div class="cart-item">
+            <img src="pents.png" alt="מכנסי אלגנט" class="product-img">
+            
+            <div class="item-info">
+                <span class="item-name">מכנסי אלגנט</span>
+                <p class="item-description">תיאור מוצר: מכנס נוח</p>
+                <span class="price">100$</span>
             </div>
+
+            <button class="remove-btn" onclick="this.parentElement.remove()">
+                <i class="fas fa-trash"></i>
+            </button>
         </div>
 
         <div class="summary">
             <div class="summary-row">
                 <span>עלות משלוח:</span>
-                <span>$<span id="shipping-cost">20</span></span>
+                <span>$20</span>
             </div>
             <div class="summary-row total-row">
-                <span>סיכום:</span>
-                <span>$<span id="total-sum">220</span></span>
+                <span>סה"כ:</span>
+                <span id="final-price">$220</span>
             </div>
-            <button class="checkout-btn">עבור לתשלום</button>
+            
+            <a href="Untitled-1.html" class="checkout-btn" style="text-decoration: none; display: block; text-align: center;">עבור לתשלום</a>
         </div>
     </div>
 
-    <script src="function updateCart() {.js"></script>
 </body>
 </html>
