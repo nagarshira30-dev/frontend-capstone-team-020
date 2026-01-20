@@ -243,39 +243,22 @@ body {
 
 
 /* כאן אתן שמות את ה CSS שלכן */
-/* הגדרת הפריט כולו כדף גמיש (שורה) */
+/* הקטנת תמונת המוצר בסל ובתשלום */
+.product-img {
+    width: 80px !important;    /* רוחב התמונה */
+    height: 80px !important;   /* גובה התמונה */
+    object-fit: cover;         /* שומר על פרופורציות ולא מותח את התמונה */
+    border-radius: 8px;        /* פינות מעוגלות */
+    display: block;            /* מוודא שהיא מתנהגת כאלמנט עצמאי */
+}
+
+/* סידור פריט העגלה כדי שהתמונה תהיה ליד הטקסט */
 .cart-item {
     display: flex;
     align-items: center;
     gap: 15px;
-    padding: 15px 0;
+    padding: 10px;
     border-bottom: 1px solid #eee;
-}
-
-/* הגבלה קשיחה לגודל התמונה - זה יפתור את הבעיה מהתמונה ששלחת! */
-.product-img {
-    width: 80px !important; 
-    height: 80px !important;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* סידור הטקסט בטור (שם, תיאור, ואז מחיר למטה) */
-.item-info {
-    display: flex;
-    flex-direction: column; 
-    flex-grow: 1;
-    gap: 4px;
-}
-
-/* דחיפת הפח לשמאל הקיצוני */
-.remove-btn {
-    margin-right: auto;
-    background: none;
-    border: none;
-    color: #e74c3c;
-    cursor: pointer;
-    font-size: 1.2rem;
 }
 
 
