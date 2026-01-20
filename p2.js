@@ -150,4 +150,14 @@ function removeItem(button) {
         itemRow.remove();
         updateCart(); // קריאה לפונקציה לעדכון המחיר אחרי המחיקה
     }
+    document.addEventListener('DOMContentLoaded', () => {
+    const checkoutBtn = document.querySelector('.checkout-btn');
+    if (checkoutBtn) {
+        checkoutBtn.addEventListener('click', (e) => {
+            // זה יבטיח שהדפדפן יעבור לעמוד הנכון
+            window.location.href = 'payment.html';
+        });
+    }
+});
 }
+

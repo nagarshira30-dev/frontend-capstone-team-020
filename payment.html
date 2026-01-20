@@ -7,7 +7,7 @@
   <title>One of One — Find the Unfindable</title>
 
 
-  <link rel="stylesheet" href="cssall.css" />
+  <link rel="stylesheet" href="p2.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
@@ -28,7 +28,7 @@
       </div>
 
       <div class="brand__logo">
-        <a class="brand" href="p4.html">
+        <a class="brand" href="#">
           <h3>One Of One</h3>
           <span>Find The Unfindable</span>
         </a>
@@ -38,7 +38,7 @@
       <div class="topbar__left">
         <button id="cartBtn" class="icon-btn" aria-label="עגלה">
           <i class="fa-solid fa-cart-shopping"></i>
-          <a href="/p2.html"></a>
+          <a href="p2.html"></a>
         </button>
 
         <button id="likesBtn" class="icon-btn" aria-label="מועדפים">
@@ -103,52 +103,43 @@
       <button class="searchbar__go">חפש</button>
       <input type="text" class="searchbar__input" placeholder="חיפוש פריטים נדירים...">
     </div>
-  </div>
-
-
-  <main >
-    <div class="checkout-wrapper">
-    <div class="payment-card">
-        <header class="payment-header">
-            <i class="fas fa-lock"></i>
-            <h2>תשלום מאובטח</h2>
-            <p>אנא הזינו את פרטי כרטיס האשראי לסיום ההזמנה</p>
-        </header>
-
-        <form id="payment-form">
-            <div class="input-group">
-                <label>שם בעל הכרטיס</label>
-                <input type="text" placeholder="ישראל ישראלי" required>
-            </div>
-
-            <div class="input-group">
-                <label>מספר כרטיס אשראי</label>
-                <div class="card-input-wrapper">
-                    <input type="text" placeholder="0000 0000 0000 0000" maxlength="19" required>
-                    <i class="far fa-credit-card"></i>
-                </div>
-            </div>
-
-            <div class="input-row">
-                <div class="input-group">
-                    <label>תוקף</label>
-                    <input type="text" placeholder="MM/YY" maxlength="5" required>
-                </div>
-                <div class="input-group">
-                    <label>CVV</label>
-                    <input type="text" placeholder="123" maxlength="3" required>
-                </div>
-            </div>
-
-            <div class="button-container">
-                <button type="submit" class="pay-button">בצע תשלום</button>
-                <a href="p2.html" class="back-btn">חזרה לסל הקניות</a>
-            </div>
-        </form>
     </div>
-</div>
-  </main>
 
+
+
+
+<main style="padding: 40px 20px;">
+    <div class="cart-container" style="max-width: 500px; margin: 0 auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h2 style="text-align: center; margin-bottom: 25px;">פרטי תשלום</h2>
+      
+      <form id="payment-form">
+        <div style="margin-bottom: 15px;">
+          <label style="display: block; margin-bottom: 5px;">שם בעל הכרטיס</label>
+          <input type="text" placeholder="ישראל ישראלי" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+          <label style="display: block; margin-bottom: 5px;">מספר כרטיס</label>
+          <input type="text" placeholder="**** **** **** ****" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+        </div>
+
+        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+          <div style="flex: 1;">
+            <label style="display: block; margin-bottom: 5px;">תוקף</label>
+            <input type="text" placeholder="MM/YY" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+          </div>
+          <div style="flex: 1;">
+            <label style="display: block; margin-bottom: 5px;">CVV</label>
+            <input type="text" placeholder="123" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+          </div>
+        </div>
+
+        <button type="submit" class="checkout-btn" style="width: 100%; background: #333; color: white; padding: 15px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">
+          בצע תשלום
+        </button>
+      </form>
+    </div>
+  </main>
 
   <footer class="footer">
     <div class="footer__contact">
@@ -178,7 +169,7 @@
     </div>
   </footer>
 
-  <script src="jsall.js"></script>
+  <script src="p2.js"></script>
 
 </body>
 
