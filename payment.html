@@ -107,36 +107,46 @@
 
 
   <main >
-    <div class="cart-container">
-        <h2>סל הקניות שלי</h2>
-<div class="cart-item">
-    <img src="shirt.png" class="product-img" alt="חולצה">
-    
-    <div class="item-info">
-        <span class="item-name">חולצת פרימיום</span>
-        <p class="item-description">תיאור מוצר: חולצה איכותית</p>
-        <span class="price">100$</span>
-    </div>
+    <div class="checkout-wrapper">
+    <div class="payment-card">
+        <header class="payment-header">
+            <i class="fas fa-lock"></i>
+            <h2>תשלום מאובטח</h2>
+            <p>אנא הזינו את פרטי כרטיס האשראי לסיום ההזמנה</p>
+        </header>
 
-    <button class="remove-btn" onclick="this.parentElement.remove()">
-        <i class="fas fa-trash"></i>
-    </button>
-</div>
-    
-           
-        <div class="summary">
-            <div class="summary-row">
-                <span>עלות משלוח:</span>
-                <span>$20</span>
+        <form id="payment-form">
+            <div class="input-group">
+                <label>שם בעל הכרטיס</label>
+                <input type="text" placeholder="ישראל ישראלי" required>
             </div>
-            <div class="summary-row total-row">
-                <span>סהכ:</span>
-                <span id="final-price">$220</span>
+
+            <div class="input-group">
+                <label>מספר כרטיס אשראי</label>
+                <div class="card-input-wrapper">
+                    <input type="text" placeholder="0000 0000 0000 0000" maxlength="19" required>
+                    <i class="far fa-credit-card"></i>
+                </div>
             </div>
-            
-            <a href="Untitled-1.html" class="checkout-btn" style="text-decoration: none; display: block; text-align: center;">עבור לתשלום</a>
-        </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label>תוקף</label>
+                    <input type="text" placeholder="MM/YY" maxlength="5" required>
+                </div>
+                <div class="input-group">
+                    <label>CVV</label>
+                    <input type="text" placeholder="123" maxlength="3" required>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="pay-button">בצע תשלום</button>
+                <a href="p2.html" class="back-btn">חזרה לסל הקניות</a>
+            </div>
+        </form>
     </div>
+</div>
   </main>
 
 
