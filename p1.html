@@ -1,28 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="he" dir="rtl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rare Items Store - קטלוג</title>
-    <link rel="stylesheet" href="page2.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One of One — Find the Unfindable</title>
+
+
+  <link rel="stylesheet" href="page2.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
 
-    <header>
-        <div class="header-container">
-            <h1>Rare Items Store</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">דף הבית</a></li>
-                    <li><a href="#" class="active">קטלוג</a></li>
-                    <li><a href="#">Wishlist</a></li>
-                    <li><a href="#">עגלת קניות</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__right">
+        <button class="icon-btn" id="menu-toggle" aria-label="תפריט">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <button class="icon-btn" id="search-toggle" aria-label="חיפוש">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="icon-btn" id="dark-mode-toggle" aria-label="חיפוש">
+          <i id="dark-mode" class="fa-solid fa-moon"></i>
+        </button>
+      </div>
 
-    <main>
+      <div class="brand__logo">
+        <a class="brand" href="p4.html">
+          <h3>One Of One</h3>
+          <span>Find The Unfindable</span>
+        </a>
+      </div>
+
+
+      <div class="topbar__left">
+        <button id="cartBtn" class="icon-btn" aria-label="עגלה">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <a href="/p2.html"></a>
+        </button>
+
+        <button id="likesBtn" class="icon-btn" aria-label="מועדפים">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+
+        <button id="loginBtn" class="icon-btn " aria-label="התחברות">
+          <i class="fa-solid fa-user"></i>
+        </button>
+      </div>
+      <button id="caret-mobile" class="icon-btn " aria-label="התחברות">
+        <i class="fa-solid fa-caret-down"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu-container">
+    <div class="mobile-menu">
+      <button id="cartMobileBtn" class="icon-btn" aria-label="עגלה">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
+
+      <button id="likesMobileBtn" class="icon-btn" aria-label="מועדפים">
+        <i class="fa-solid fa-heart"></i>
+      </button>
+
+      <button id="loginMobileBtn" class="icon-btn " aria-label="התחברות">
+        <i class="fa-solid fa-user"></i>
+        <a href="/p3.html"></a>
+      </button>
+      <button class="icon-btn" id="search-toggle-mobile" aria-label="חיפוש">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <button class="icon-btn" id="dark-mode-toggle-mobile" aria-label="חיפוש">
+        <i id="dark-mode" class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__panel">
+      <div class="sidebar__header">
+        <button class="sidebar__close" id="sidebar-close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <span class="sidebar__title">Categories</span>
+      </div>
+      <nav class="sidebar__nav">
+        <a href="p1.html">Clothes</a>
+        <a href="p5.html">Design</a>
+        <a href="p4.html">Sale</a>
+      </nav>
+    </div>
+  </aside>
+
+
+  <div class="searchbar" id="searchbar">
+    <div class="searchbar__panel">
+
+      <button class="searchbar__close" id="search-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <button class="searchbar__go">חפש</button>
+      <input type="text" class="searchbar__input" placeholder="חיפוש פריטים נדירים...">
+    </div>
+  </div>
+
+
+  <main>
         <section class="filters" aria-label="מערכת מיון וסינון">
             <div class="filter-group">
                 <label for="category-filter">Filter</label>
@@ -114,9 +198,40 @@
 </div>  
     </main>
 
-    <footer>
-        <p>© 1995 Rare Items Store - חנות לפריטים נדירים</p>
-    </footer>
+
+  <footer class="footer">
+    <div class="footer__contact">
+      <div>
+        <h3>Customer service</h3>
+        <p>Sunday to Thrusday: 09:00 - 17:00</p>
+      </div>
+      <div class="footer__contact__middle">
+        <i aria-hidden="true" class="fab fa-facebook-f"></i>
+        <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+        <i aria-hidden="true" class="fab fa-instagram"></i>
+      </div>
+      <div class="footer__contact__newsletter">
+        <p>Register the newsletter</p>
+        <p>and stay updated</p>
+        <div>
+          <input style="direction:ltr" type="text" placeholder="your email">
+          <button>
+            <i class="fa-solid fa-greater-than"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+   
+  <div class="footer__copyright">
+
+      <p>©️ One of One — Find the Unfindable</p>
+    </div>
+  </footer>
+
+  <script src="page2.js"></script>
 
 </body>
+
 </html>
+
+ 
