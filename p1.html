@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One of One — Find the Unfindable</title>
+
+
+  <link rel="stylesheet" href="page2.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__right">
+    <button class="icon-btn" id="menu-toggle" aria-label="תפריט">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <button class="icon-btn" id="search-toggle" aria-label="חיפוש">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    <button class="icon-btn" id="dark-mode-toggle" aria-label="מצב כהה">
+        <i id="dark-mode" class="fa-solid fa-moon"></i>
+    </button>
+</div>
+
+      <div class="brand__logo">
+        <a class="brand" href="p4.html">
+          <h3>One Of One</h3>
+          <span>Find The Unfindable</span>
+        </a>
+      </div>
+
+
+      <div class="topbar__left">
+        <button id="cartBtn" class="icon-btn" aria-label="עגלה">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <a href="/p2.html"></a>
+        </button>
+
+        <button id="likesBtn" class="icon-btn" aria-label="מועדפים">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+
+        <button id="loginBtn" class="icon-btn " aria-label="התחברות">
+          <i class="fa-solid fa-user"></i>
+        </button>
+      </div>
+      <button id="caret-mobile" class="icon-btn " aria-label="התחברות">
+        <i class="fa-solid fa-caret-down"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu-container">
+    <div class="mobile-menu">
+      <button id="cartMobileBtn" class="icon-btn" aria-label="עגלה">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
+
+      <button id="likesMobileBtn" class="icon-btn" aria-label="מועדפים">
+        <i class="fa-solid fa-heart"></i>
+      </button>
+
+      <button id="loginMobileBtn" class="icon-btn " aria-label="התחברות">
+        <i class="fa-solid fa-user"></i>
+        <a href="/p3.html"></a>
+      </button>
+      <button class="icon-btn" id="search-toggle-mobile" aria-label="חיפוש">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <button class="icon-btn" id="dark-mode-toggle-mobile" aria-label="חיפוש">
+        <i id="dark-mode" class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__panel">
+      <div class="sidebar__header">
+        <button class="sidebar__close" id="sidebar-close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <span class="sidebar__title">Categories</span>
+      </div>
+      <nav class="sidebar__nav">
+        <a href="p1.html">Clothes</a>
+        <a href="p5.html">Design</a>
+        <a href="p4.html">Sale</a>
+      </nav>
+    </div>
+  </aside>
+
+
+  <div class="searchbar" id="searchbar">
+    <div class="searchbar__panel">
+
+      <button class="searchbar__close" id="search-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <button class="searchbar__go">חפש</button>
+      <input type="text" class="searchbar__input" placeholder="חיפוש פריטים נדירים...">
+    </div>
+  </div>
+
+
+  <main>
+        <section class="filters" aria-label="מערכת מיון מחירים">
+    <div class="filter-group">
+        <label for="price-sort">Sort by Price:</label>
+        <select id="price-sort">
+            <option value="default">-- Choose --</option>
+            <option value="low-to-high">Price: Low to High</option>
+            <option value="high-to-low">Price: High to Low</option>
+        </select>
+        <button id="sort-btn" class="btn-primary">Sort Items</button>
+    </div>
+        </section>
+
+     <div class="product-grid" id="product-container">
+    
+    <article class="product-card" data-category="clothing">
+        <div class="badge rarity">Rare</div>
+        <img src="./jaket.png" alt="מעיל צמר וינטג'">
+        <div class="card-content">
+            <h3>1970s Classic Leather Biker</h3>
+            <p class="price">5,000$</p>
+            <div class="actions">
+                <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
+                <button class="btn-add" aria-label="הוסף לעגלה">Add to cart</button>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card" data-category="clothing">
+        <img src="./skirt.png" alt="חצאית">
+        <div class="card-content">
+            <h3>Retro Floral Pleated Skirt</h3>
+            <p class="price">6,500$</p>
+            <div class="actions">
+                <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
+                <button class="btn-add" aria-label="הוסף לעגלה">Add to cart</button>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card" data-category="clothing">
+        <img src="./dress.png" alt="שמלת פשתן בז'">
+        <div class="card-content">
+            <h3>Timeless Linen Midi Dress</h3>
+            <p class="price">30,000$</p>
+            <div class="actions">
+                <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
+                <button class="btn-add" aria-label="הוסף לעגלה">Add to cart</button>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card" data-category="clothing">
+        <div class="badge out-of-stock">not available</div>
+        <img src="./shoes.png" alt="נעליים">
+        <div class="card-content">
+            <h3>Elegant Vintage Mary Janes</h3>
+            <p class="price">₪15,000$</p>
+            <div class="actions">
+                <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
+                <button class="btn-add disabled" disabled>Sold out</button>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card" data-category="clothing">
+        <img src="./shirt.png" alt="חולצה מעוצבת">
+        <div class="card-content">
+            <h3>Artisan Embroidered Silk Blouse</h3>
+            <p class="price">2,300$</p>
+            <div class="actions">
+                <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
+                <button class="btn-add" aria-label="הוסף לעגלה">Add to cart</button>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card" data-category="clothing">
+        <img src="./pents.png" alt="מכנסיים">
+        <div class="card-content">
+            <h3>High-Waisted Tailored Trousers</h3>
+            <p class="price">1,400$</p>
+            <div class="actions">
+                <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
+                <button class="btn-add" aria-label="הוסף לעגלה">Add to cart</button>
+            </div>
+        </div>
+    </article>
+
+</div>  
+    </main>
+
+
+  <footer class="footer">
+    <div class="footer__contact">
+      <div>
+        <h3>Customer service</h3>
+        <p>Sunday to Thrusday: 09:00 - 17:00</p>
+      </div>
+      <div class="footer__contact__middle">
+        <i aria-hidden="true" class="fab fa-facebook-f"></i>
+        <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+        <i aria-hidden="true" class="fab fa-instagram"></i>
+      </div>
+      <div class="footer__contact__newsletter">
+        <p>Register the newsletter</p>
+        <p>and stay updated</p>
+        <div>
+          <input style="direction:ltr" type="text" placeholder="your email">
+          <button>
+            <i class="fa-solid fa-greater-than"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+   
+  <div class="footer__copyright">
+
+      <p>©️ One of One — Find the Unfindable</p>
+    </div>
+  </footer>
+
+  <script src="page2.js"></script>
+
+</body>
+
+</html>
+
+ 

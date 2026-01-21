@@ -7,7 +7,7 @@
   <title>One of One — Find the Unfindable</title>
 
 
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="p5.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
@@ -106,30 +106,97 @@
   </div>
 
 
-  <main class="hero">
-    <section class="card">
-      <h1 class="card__title">
-        Welcome to <span class="gold">One of One</span>
-      </h1>
-      <p class="card__subtitle">Find the Unfindable</p>
-      <p class="card__content">Curated vintage pieces, rare finds, and timeless treasures.</p>
-      <p class="card__content">
-        
-Each item is carefully selected for its story, character, and uniqueness - because true style is one of a kind.
-      </p>
+  <main>
+        <section class="filters" aria-label="מערכת מיון מחירים">
+    <div class="filter-group">
+        <label for="price-sort">Sort by Price:</label>
+        <select id="price-sort">
+            <option value="default">-- Choose --</option>
+            <option value="low-to-high">Price: Low to High</option>
+            <option value="high-to-low">Price: High to Low</option>
+        </select>
+        <button id="sort-btn" class="btn-primary">Sort Items</button>
+    </div>
+</section>
 
-      <div class="card__actions">
-        <a class="btn--primary" href="#">View the collection</a>
-      </div>
+     <div class="product-grid" id="product-container">
+    
+    <article class="product-card" data-category="furniture">
+        <div class="badge rarity">Rare</div>
+        <img src="./chair.png" alt="כיסא וינטג'">
+        <div class="card-content">
+            <h3>Classic Velvet chair</h3>
+            <p class="price">10,000$</p>
+            <div class="actions">
+                <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
+                <button class="btn-add" aria-label="הוסף לעגלה">Add to cart</button>
+            </div>
+        </div>
+    </article>
 
+    <article class="product-card" data-category="furniture">
+        <img src="./candlesticks.png" alt="נרות">
+        <div class="card-content">
+            <h3>Luxury Candles</h3>
+            <p class="price">2,200$</p>
+            <div class="actions">
+                <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
+                <button class="btn-add" aria-label="הוסף לעגלה">Add to cart</button>
+            </div>
+        </div>
+    </article>
 
-      <div class="card__chips">
-        <span class="chip">Vintage</span>
-        <span class="chip">Rare Finds</span>
-        <span class="chip">Curated</span>
-      </div>
-    </section>
-  </main>
+    <article class="product-card" data-category="furniture">
+        <img src="./buffet.png" alt="  מזנון'">
+        <div class="card-content">
+            <h3>Wooden Heritage Buffet</h3>
+            <p class="price">24,000$</p>
+            <div class="actions">
+                <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
+                <button class="btn-add" aria-label="הוסף לעגלה">Add to cart</button>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card" data-category="furniture">
+        <div class="badge out-of-stock">not available</div>
+        <img src="./mirror.png" alt="מראה">
+        <div class="card-content">
+            <h3>Golden Antique Mirror</h3>
+            <p class="price">₪55,000$</p>
+            <div class="actions">
+                <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
+                <button class="btn-add disabled" disabled>Sold out</button>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card" data-category="furniture">
+        <img src="./picture.png" alt="תמונה">
+        <div class="card-content">
+            <h3>Vintage Framed Art</h3>
+            <p class="price">7,700$</p>
+            <div class="actions">
+                <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
+                <button class="btn-add" aria-label="הוסף לעגלה">Add to cart</button>
+            </div>
+        </div>
+    </article>
+
+    <article class="product-card" data-category="furniture">
+        <img src="./sofa.png" alt="ספה">
+        <div class="card-content">
+            <h3>Royal Leather Sofa</h3>
+            <p class="price">54,000$</p>
+            <div class="actions">
+                <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
+                <button class="btn-add" aria-label="הוסף לעגלה">Add to cart</button>
+            </div>
+        </div>
+    </article>
+
+</div>  
+    </main>
 
 
   <footer class="footer">
@@ -154,14 +221,17 @@ Each item is carefully selected for its story, character, and uniqueness - becau
         </div>
       </div>
     </div>
-    <div class="footer__copyright">
+   
+  <div class="footer__copyright">
 
-      <p>© One of One — Find the Unfindable</p>
+      <p>©️ One of One — Find the Unfindable</p>
     </div>
   </footer>
 
-  <script src="j4.js"></script>
+  <script src="p5.js"></script>
 
 </body>
 
 </html>
+
+ 
