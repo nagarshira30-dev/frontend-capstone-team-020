@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique | תשלום מאובטח</title>
+    <link rel="stylesheet" href="body {.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<div class="checkout-wrapper">
+    <div class="payment-card">
+        <header class="payment-header">
+            <i class="fas fa-lock"></i>
+            <h2>תשלום מאובטח</h2>
+            <p>אנא הזינו את פרטי כרטיס האשראי לסיום ההזמנה</p>
+        </header>
+
+        <form id="payment-form">
+            <div class="input-group">
+                <label>שם בעל הכרטיס</label>
+                <input type="text" placeholder="ישראל ישראלי" required>
+            </div>
+
+            <div class="input-group">
+                <label>מספר כרטיס אשראי</label>
+                <div class="card-input-wrapper">
+                    <input type="text" placeholder="0000 0000 0000 0000" maxlength="19" required>
+                    <i class="far fa-credit-card"></i>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label>תוקף</label>
+                    <input type="text" placeholder="MM/YY" maxlength="5" required>
+                </div>
+                <div class="input-group">
+                    <label>CVV</label>
+                    <input type="text" placeholder="123" maxlength="3" required>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="pay-button">בצע תשלום</button>
+                <a href="p2.html" class="back-btn">חזרה לסל הקניות</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="Untitled-1.js"></script>
+</body>
+</html>
