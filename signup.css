@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* הגדרות צבעים ומשתנים */
+:root {
+  --bg-main: #fdfdfb;       /* לבן שמנת */
+  --primary-brown: #5d4037;  /* חום עמוק */
+  --light-brown: #5c3f3663;  /* חום עמוק */
+  --accent-beige: #d2b48c;   /* בז' */
+  --gold: #C9A227;           /* זהב */
+  --text-dark: #3e2723;      /* חום כהה לטקסט */
+  --white: #ffffff;
+  --radius-xl: 22px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  direction: rtl;
+  overflow-x: hidden;
+}
+
+/* --- Top Bar --- */
+.topbar {
+  background-color: var(--primary-brown);
+  border-bottom: 2px solid var(--gold);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.topbar__inner {
+  max-width:100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar__right, .topbar__left {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.mobile-menu-container {
+  position: fixed;
+  left: 5%;
+  height: 250px;
+  min-width: 20%;
+  display: none;
+  pointer-events: none;
+  z-index: 4000;
+}
+.mobile-menu{
+  position: absolute;
+  opacity: 1;
+  left:12%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: auto;
+  gap:5px;
+  z-index: 4000;
+}
+.mobile-menu > button{
+  background-color: var(--primary-brown);
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.icon-btn:hover {
+  background: var(--gold);
+  color: var(--primary-brown);
+}
+
+.brand__logo {
+  width: 155px;
+  height: 55px;
+  border-radius: 5px;
+  border: 2px solid var(--gold);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand{
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+
+}
+.brand > span{
+  font-size: smaller;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 2000;
+  width: 50%;
+}
+
+.sidebar.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar__panel {
+  position: absolute;
+  top: 0;
+  right: -320px;
+  width: 320px;
+  height: 100%;
+  background: var(--bg-main);
+  padding: 30px;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+}
+
+.sidebar.is-open .sidebar__panel {
+  right: 0;
+}
+
+.sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.sidebar__title {
+  font-weight: 800;
+  color: var(--primary-brown);
+  font-size: 1.2rem;
+}
+
+.sidebar__close {
+  background: #f0f0f0;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.sidebar__nav a {
+  display: block;
+  padding: 15px;
+  margin-bottom: 12px;
+  background: #f4f1ea;
+  color: var(--primary-brown);
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.sidebar__nav a:hover {
+  background: var(--accent-beige);
+  color: white;
+}
+
+/* --- Searchbar --- */
+.searchbar {
+  width: 100%;
+  padding: 20px;
+  transition: 0.4s ease;
+  z-index: 1500;
+  display: none;
+}
+
+.searchbar.is-open {
+  display: block;
+}
+
+.searchbar__panel {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.searchbar__input {
+  flex: 1;
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: 2px solid var(--accent-beige);
+  outline: none;
+  font-size: 1rem;
+}
+
+.searchbar__go {
+  background: var(--gold);
+  color: var(--primary-brown);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.searchbar__close {
+  background: #f0f0f0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#caret-mobile{
+  display:none;
+}
+
+
+
+/*--signup disain--*/
+.signup-box{
+ position: relative;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.page-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  direction: ltr;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-row label {
+  min-width: 120px;
+  text-align: left;
+    min-width: 120px;
+  padding-inline: 12px;
+}
+
+.form-row input {
+  border-radius: 20px;
+}
+
+
+.page-content {
+  flex: 1; /* תופס את כל הגובה בין header ל-footer */
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+}
+
+
+button {
+  padding: 10px;
+  background-color: #78a6c2;
+  color: rgb(6, 6, 6);
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #54849e;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #486f85;
+  transform: translateY(0);
+}
+
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 0.9rem;
+
+}
+
+.footer__contact{
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+  width: 100%;
+  padding-bottom: 40px;
+  font-family: "Heebo", sans-serif;
+  font-size: 0.9rem;
+}
+.footer p {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.footer__contact > div{
+  width: 30%;
+}
+
+.footer__contact__newsletter{
+  display: flex;
+  flex-direction: column;
+  
+}
+.footer__contact__newsletter input {
+  border-radius: 20px;   /* מעוגל עדין */
+  padding: 8px 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.footer__contact__newsletter >div> button{
+  height: 25px;
+  display: inline-block;
+  padding: 1px 2px;
+  background-color: var(--light-brown);
+  border-radius: 999px;  
+  border-color: var(--light-brown);
+  outline: none;
+
+}
+.footer__contact__middle{
+  border-left: 1px solid var(--primary-brown);
+  border-right: 1px solid var(--primary-brown);
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer__copyright{
+  opacity: 0.6;
+}
+/* --- רספונסיביות --- */
+
+@media (max-width: 1024px) {
+  .topbar__inner { max-width: 100%; }
+  .card__title { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+  .card { padding: 35px 25px; max-width: 95%; }
+  .card__title { 
+    font-size: 2.2rem; 
+    white-space: normal; /* בטאבלט ומטה נרצה שיעלה שורה אם אין ברירה */
+  }
+}
+
+@media (max-width: 480px) {
+  .brand__logo { width: 145px; height: 45px; }
+  .card__title { font-size: 1.8rem; }
+  .btn--primary { width: 100%; }
+  .searchbar__panel { flex-direction: column; }
+  .topbar__left, #dark-mode-toggle, #search-toggle{
+     display: none;
+  }
+  #caret-mobile{
+    display: initial;
+  }
+  .footer__contact{
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .footer__contact__newsletter >div{
+    display: flex;
+    justify-content: center;
+  }
+}

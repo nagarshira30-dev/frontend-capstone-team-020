@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!doctype html>
 <html lang="he" dir="rtl">
 
@@ -8,7 +7,7 @@
   <title>One of One — Find the Unfindable</title>
 
 
-  <link rel="stylesheet" href="p2.css" />
+  <link rel="stylesheet" href="signup.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
@@ -78,6 +77,7 @@
       </button>
     </div>
   </div>
+  
   <aside class="sidebar" id="sidebar">
     <div class="sidebar__panel">
       <div class="sidebar__header">
@@ -106,36 +106,62 @@
     </div>
   </div>
 
-  <main >
-    <div class="cart-container">
-        <h2>סל הקניות שלי</h2>
-<div class="cart-item">
-    <img src="shirt.png" class="product-img" alt="חולצה">
-    
-    <div class="item-info">
-        <span class="item-name">חולצת פרימיום</span>
-        <p class="item-description">תיאור מוצר: חולצה איכותית</p>
-        <span class="price">100$</span>
-    </div>
+<!--signup code-->
+  <main class="page-content">
+    <hr>
+    <div class="signup-box">
+     <form action="/signup" method="post" autocomplete="on">
+        <fieldset class="signup-box">
+            <legend>create acount</legend>
 
-    <button class="remove-btn" onclick="this.parentElement.remove()">
-        <i class="fas fa-trash"></i>
-    </button>
-</div>
-    
-           
-        <div class="summary">
-            <div class="summary-row">
-                <span>עלות משלוח:</span>
-                <span>$20</span>
+            <div class="form-row">
+                <label for="name">Full name:</label>
+                <input type="text" name="name" required autocomplete="name" placeholder="Israel Israeli">
             </div>
-            <div class="summary-row total-row">
-                <span>סהכ:</span>
-                <span id="final-price">$220</span>
+
+            <div class="form-row">  
+                <label for="email">Email:</label>
+                <input type="text" name="email" required autocomplete="email">
             </div>
+
+            <div class="form-row">
+            <label for="new password">Password: </label>
+            <input type="password" id="password" name="password">
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Phone number:</label>
+              <input type="int" name="phone" required autocomplete="phone number">
+            </div>
+
             
-            <a href="payment.html" class="checkout-btn" style="text-decoration: none; display: block; text-align: center;">עבור לתשלום</a>
-        </div>
+            <div class="form-row">
+              <label for="city">City:</label>
+              <input type="text" name="city" required autocomplete="address-level2">
+            </div>
+
+            <div class="form-row">
+              <label for="street">Street:</label>
+              <input type="text" name="street"required autocomplete="street-address">
+            </div>
+
+            <div class="form-row">
+              <label for="house number">House number:</label>
+              <input type="text" name="house number" required autocomplete="house number">
+            </div>
+
+            <div class="form-row">
+              <label for="zip">Zip:<code></code></label>
+              <input type="text" name="zip" required autocomplete="postal-code">
+            </div>
+           
+           
+            <div class="button">
+              <button type="button" id="registerBtn">Signup</button>
+              <p id="message"></p>
+            </div>
+        </fieldset>
+      </form>
     </div>
   </main>
 
@@ -168,21 +194,8 @@
     </div>
   </footer>
 
-  <script src="p2.js"></script>
+  <script src="j3.js"></script>
 
 </body>
 
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <h1></h1>maayan
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
->>>>>>> origin/avigail
 </html>
