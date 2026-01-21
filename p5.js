@@ -1,4 +1,5 @@
-// --- מערכת מיון לפי מחיר ---
+
+  // --- מערכת מיון לפי מחיר ---
 const sortBtn = document.getElementById('sort-btn');
 const priceSortSelect = document.getElementById('price-sort');
 const productContainer = document.getElementById('product-container');
