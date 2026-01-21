@@ -244,17 +244,48 @@ body {
 
 /*--signup disain--*/
 .signup-box{
-   position: relative;;
-      left: 25%;
-      width: 50%;
-}
-
-.signup-box{
+ position: relative;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  align-items: center;
 }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  direction: ltr;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-row label {
+  min-width: 120px;
+  text-align: left;
+    min-width: 120px;
+  padding-inline: 12px;
+}
+
+.form-row input {
+  flex: 1;
+  border-radius: 20px;
+ 
+}
+
+
+.page-content {
+  flex: 1; /* תופס את כל הגובה בין header ל-footer */
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+}
+
 
 button {
   padding: 10px;
@@ -276,8 +307,6 @@ button:active {
   background-color: #486f85;
   transform: translateY(0);
 }
-
-
 
 
 .footer {
