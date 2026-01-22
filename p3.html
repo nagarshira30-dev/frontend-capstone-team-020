@@ -1,133 +1,201 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>one of one\signup</title>
-    <link rel="stylesheet" href="signup.css">
-</head>
-<body>
-   
- <header class="header">
-    <nav class="topbar" aria-label="תפריט עליון">
-      <!-- שמאל: המבורגר + חיפוש -->
-      <div class="topbar__left">
-        <button class="icon-btn" type="button" id="menuBtn" aria-label="פתיחת תפריט קטגוריות">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/>
-          </svg>
-        </button>
+<!doctype html>
+<html lang="he" dir="rtl">
 
-        <button class="icon-btn" type="button" id="searchBtn" aria-label="חיפוש">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm11 3-6-6 1.4-1.4 6 6L21 21z"/>
-          </svg>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One of One — Find the Unfindable</title>
+
+
+  <link rel="stylesheet" href="signup.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__right">
+        <button class="icon-btn" id="menu-toggle" aria-label="תפריט">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <button class="icon-btn" id="search-toggle" aria-label="חיפוש">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="icon-btn" id="dark-mode-toggle" aria-label="חיפוש">
+          <i id="dark-mode" class="fa-solid fa-moon"></i>
         </button>
       </div>
 
-      <!-- ימין: התחברות + לב + עגלה + לוגו -->
-      <div class="topbar__right">
-        <div class="actions" aria-label="פעולות">
-          <button class="pill-btn" type="button" id="loginBtn" aria-label="התחברות">התחברות</button>
-
-          <button class="icon-btn" type="button" id="favBtn" aria-label="מועדפים">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 21s-7-4.4-9.3-8.6C.8 9 .9 5.9 3.2 4 5.2 2.3 8 2.7 10 4.7L12
-              6.7l2-2c2-2 4.8-2.4 6.8-.7 2.3 1.9 2.4 5 .5 8.4C19 16.6 12 21 12 21z"/>
-            </svg>
-            <span class="badge" id="favBadge" aria-label="כמות מועדפים">0</span>
-          </button>
-
-          <button class="icon-btn" type="button" id="cartBtn" aria-label="עגלה">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10
-              0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.2 14h9.9c.8 0
-              1.5-.5 1.8-1.2l3-7.1A1 1 0 0 0 21 4H6.2L5.8 2.7A1 1 0 0 0 4.9 2H2a1
-              1 0 1 0 0 2h2.2l2.4 9.2c.2.8 1 1.4 1.8 1.4z"/>
-            </svg>
-            <span class="badge" id="cartBadge" aria-label="כמות בעגלה">0</span>
-          </button>
-        </div>
-
-        <!-- לוגו (מתוקן — בלי placeholder) -->
-        <a class="brand" href="#" aria-label="דף הבית">
-          <div class="brand__logo">
-            <img src="/assets/logo.png" alt="One of One logo">
-          </div>
+      <div class="brand__logo">
+        <a class="brand" href="p4.html">
+          <h3>One Of One</h3>
+          <span>Find The Unfindable</span>
         </a>
       </div>
-    </nav>
-  </header>
 
-  <!-- תפריט קטגוריות -->
-  <aside class="side-menu" id="sideMenu" aria-hidden="true">
-    <div class="side-menu__header">
-      <h2 class="side-menu__title">קטגוריות</h2>
-      <button class="icon-btn" type="button" id="closeMenuBtn" aria-label="סגירת תפריט">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3
-          9.2 12 2.9 5.7 4.3 4.3l6.3 6.3 6.3-6.3 1.4 1.4z"/>
-        </svg>
+
+      <div class="topbar__left">
+        <button id="cartBtn" class="icon-btn" aria-label="עגלה">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <a href="/p2.html"></a>
+        </button>
+
+        <button id="likesBtn" class="icon-btn" aria-label="מועדפים">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+
+        <button id="loginBtn" class="icon-btn " aria-label="התחברות">
+          <i class="fa-solid fa-user"></i>
+        </button>
+      </div>
+      <button id="caret-mobile" class="icon-btn " aria-label="התחברות">
+        <i class="fa-solid fa-caret-down"></i>
       </button>
     </div>
+  </header>
 
-    <ul class="side-menu__list" aria-label="רשימת קטגוריות">
-      <li><a class="side-link" href="#" role="button">בגדים</a></li>
-      <li><a class="side-link" href="#" role="button">עיצוב</a></li>
-      <li><a class="side-link side-link--sale" href="#" role="button">סייל</a></li>
-    </ul>
+  <div class="mobile-menu-container">
+    <div class="mobile-menu">
+      <button id="cartMobileBtn" class="icon-btn" aria-label="עגלה">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
+
+      <button id="likesMobileBtn" class="icon-btn" aria-label="מועדפים">
+        <i class="fa-solid fa-heart"></i>
+      </button>
+
+      <button id="loginMobileBtn" class="icon-btn " aria-label="התחברות">
+        <i class="fa-solid fa-user"></i>
+        <a href="/p3.html"></a>
+      </button>
+      <button class="icon-btn" id="search-toggle-mobile" aria-label="חיפוש">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <button class="icon-btn" id="dark-mode-toggle-mobile" aria-label="חיפוש">
+        <i id="dark-mode" class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </div>
+  
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__panel">
+      <div class="sidebar__header">
+        <button class="sidebar__close" id="sidebar-close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <span class="sidebar__title">Categories</span>
+      </div>
+      <nav class="sidebar__nav">
+        <a href="p1.html">Clothes</a>
+        <a href="p5.html">Design</a>
+        <a href="p4.html">Sale</a>
+      </nav>
+    </div>
   </aside>
 
-  <!--signup code-->
+
+  <div class="searchbar" id="searchbar">
+    <div class="searchbar__panel">
+
+      <button class="searchbar__close" id="search-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <button class="searchbar__go">חפש</button>
+      <input type="text" class="searchbar__input" placeholder="חיפוש פריטים נדירים...">
+    </div>
+  </div>
+
+<!--signup code-->
+  <main class="page-content">
     <hr>
+    <div class="signup-box">
      <form action="/signup" method="post" autocomplete="on">
         <fieldset class="signup-box">
             <legend>create acount</legend>
 
-            <div class="name">
+            <div class="form-row">
                 <label for="name">Full name:</label>
                 <input type="text" name="name" required autocomplete="name" placeholder="Israel Israeli">
             </div>
 
-            <div class="email">  
+            <div class="form-row">  
                 <label for="email">Email:</label>
                 <input type="text" name="email" required autocomplete="email">
             </div>
 
-            <div class="password">
-            <label for="new password">password: </label>
-            <input type="text" name="password">
+            <div class="form-row">
+            <label for="new password">Password: </label>
+            <input type="password" id="password" name="password">
             </div>
 
-            <div class="phone">
-              <label for="phone">phone number:</label>
+            <div class="form-row">
+              <label for="phone">Phone number:</label>
               <input type="int" name="phone" required autocomplete="phone number">
             </div>
 
-            <div class="adrass">
-              <div>
-                <label for="city">city:</label>
-                <input type="text" name="city" required autocomplete="city-address">
-              </div>
-              <div>
-                <label for="street">street:</label>
-                <input type="text" name="street"required autocomplete="street-address">
-              </div>
-              <div>
-                <label for="house number">house number:</label>
-                <input type="text" name="house number" required autocomplete="house number">
-              </div>
-              <div>
-                <label for="zip">zip:<code></code></label>
-                <input type="text" name="zip" required autocomplete="zip">
-              </div>
+            
+            <div class="form-row">
+              <label for="city">City:</label>
+              <input type="text" name="city" required autocomplete="address-level2">
+            </div>
+
+            <div class="form-row">
+              <label for="street">Street:</label>
+              <input type="text" name="street"required autocomplete="street-address">
+            </div>
+
+            <div class="form-row">
+              <label for="house number">House number:</label>
+              <input type="text" name="house number" required autocomplete="house number">
+            </div>
+
+            <div class="form-row">
+              <label for="zip">Zip:<code></code></label>
+              <input type="text" name="zip" required autocomplete="postal-code">
             </div>
            
+           
             <div class="button">
-                <button type="submit"onclick="alert('You are now signup!')">Sign up</button>
+              <button type="button" id="registerBtn">Signup</button>
+              <p id="message"></p>
             </div>
         </fieldset>
+      </form>
+    </div>
+  </main>
 
-    </form>
+
+  <footer class="footer">
+    <div class="footer__contact">
+      <div>
+        <h3>Customer service</h3>
+        <p>Sunday to Thrusday: 09:00 - 17:00</p>
+      </div>
+      <div class="footer__contact__middle">
+        <i aria-hidden="true" class="fab fa-facebook-f"></i>
+        <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+        <i aria-hidden="true" class="fab fa-instagram"></i>
+      </div>
+      <div class="footer__contact__newsletter">
+        <p>Register the newsletter</p>
+        <p>and stay updated</p>
+        <div>
+          <input style="direction:ltr" type="text" placeholder="your email">
+          <button>
+            <i class="fa-solid fa-greater-than"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright">
+
+      <p>©️ One of One — Find the Unfindable</p>
+    </div>
+  </footer>
+
+  <script src="j3.js"></script>
+
 </body>
+
 </html>

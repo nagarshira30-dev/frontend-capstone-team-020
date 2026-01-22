@@ -242,69 +242,25 @@ body {
 
 
 
-/*--signup disain--*/
-.signup-box{
- position: relative;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
+/* כאן אתן שמות את ה CSS שלכן */
+/* הקטנת תמונת המוצר בסל ובתשלום */
+.product-img {
+    width: 80px !important;    /* רוחב התמונה */
+    height: 80px !important;   /* גובה התמונה */
+    object-fit: cover;         /* שומר על פרופורציות ולא מותח את התמונה */
+    border-radius: 8px;        /* פינות מעוגלות */
+    display: block;            /* מוודא שהיא מתנהגת כאלמנט עצמאי */
 }
 
-.page-content {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  direction: ltr;
+/* סידור פריט העגלה כדי שהתמונה תהיה ליד הטקסט */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
 }
 
-.form-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.form-row label {
-  min-width: 120px;
-  text-align: left;
-    min-width: 120px;
-  padding-inline: 12px;
-}
-
-.form-row input {
-  border-radius: 20px;
-}
-
-
-.page-content {
-  flex: 1; /* תופס את כל הגובה בין header ל-footer */
-  display: flex;
-  justify-content: center; 
-  align-items: center;     
-}
-
-
-button {
-  padding: 10px;
-  background-color: #78a6c2;
-  color: rgb(6, 6, 6);
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-button:hover {
-  background-color: #54849e;
-  transform: translateY(-2px);
-}
-
-button:active {
-  background-color: #486f85;
-  transform: translateY(0);
-}
 
 
 .footer {
