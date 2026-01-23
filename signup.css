@@ -242,21 +242,18 @@ body {
 
 
 
-/*--signup disain--*/
-.signup-box{
- position: relative;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
+/*--signup design--*/
+
+.page-content{
+  padding: 40px 20px;
 }
 
-.page-content {
+.signup-box{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   direction: ltr;
+  align-items: left;
 }
 
 .form-row {
@@ -266,46 +263,50 @@ body {
 }
 
 .form-row label {
-  min-width: 120px;
-  text-align: left;
-    min-width: 120px;
-  padding-inline: 12px;
+ text-align: left;
+  margin-bottom: 35px;
+  width: 120px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
 }
 
 .form-row input {
-  border-radius: 20px;
+   width: 100%;
+  padding: 12px;
+  border: 1px solid var(--accent-beige);
+  border-radius: 8px;
+  font-size: 1rem;
 }
-
 
 .page-content {
-  flex: 1; /* תופס את כל הגובה בין header ל-footer */
-  display: flex;
-  justify-content: center; 
-  align-items: center;     
+  max-width: 500px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--light-brown);    
+  direction: ltr;
 }
 
+.button {
+  text-align: center; 
+  margin-top: 20px;
+}
 
-button {
-  padding: 10px;
-  background-color: #78a6c2;
-  color: rgb(6, 6, 6);
+.button button {
+  padding: 10px 30px;    
+  background: var(--primary-brown);
+  color: white;
   border: none;
   border-radius: 6px;
   font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  display: inline-block;  
 }
 
-button:hover {
-  background-color: #54849e;
-  transform: translateY(-2px);
+.button button:hover {
+  background-color: var(--gold);
+  transform: translateY(-1px);
 }
-
-button:active {
-  background-color: #486f85;
-  transform: translateY(0);
-}
-
 
 .footer {
   text-align: center;
@@ -376,7 +377,7 @@ button:active {
   .card { padding: 35px 25px; max-width: 95%; }
   .card__title { 
     font-size: 2.2rem; 
-    white-space: normal; /* בטאבלט ומטה נרצה שיעלה שורה אם אין ברירה */
+    white-space: normal; 
   }
 }
 
