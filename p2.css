@@ -244,24 +244,148 @@ body {
 
 /* כאן אתן שמות את ה CSS שלכן */
 /* הקטנת תמונת המוצר בסל ובתשלום */
-.product-img {
-    width: 80px !important;    /* רוחב התמונה */
-    height: 80px !important;   /* גובה התמונה */
-    object-fit: cover;         /* שומר על פרופורציות ולא מותח את התמונה */
-    border-radius: 8px;        /* פינות מעוגלות */
-    display: block;            /* מוודא שהיא מתנהגת כאלמנט עצמאי */
-}
-
-/* סידור פריט העגלה כדי שהתמונה תהיה ליד הטקסט */
+/* פריט העגלה - הפיכה לכרטיס מעוגל במקום שורה רגילה */
 .cart-item {
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 10px;
-    border-bottom: 1px solid #eee;
+    gap: 20px;
+    padding: 15px;
+    background-color: #fff; /* רקע לבן */
+    border: 1px solid #f0f0f0; /* מסגרת דקה ועדינה */
+    border-radius: 16px; /* פינות מעוגלות כמו בדף התשלום */
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02); /* צל כמעט בלתי נראה לעומק */
+}
+
+/* שדרוג התמונה */
+.product-img {
+    width: 90px !important;
+    height: 90px !important;
+    object-fit: cover;
+    border-radius: 12px; /* עיגול תואם לכרטיס */
+    flex-shrink: 0; /* מונע מהתמונה להתכווץ */
+}
+
+/* סידור הטקסט בתוך הפריט */
+.item-details {
+    flex-grow: 1; /* לוקח את כל השטח הפנוי */
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* כפתור המחיקה (הפח) */
+.remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #888;
+    transition: color 0.2s;
+    order: -1; /* מעביר את הפח לצד שמאל (לפי העיצוב שרצית) */
+}
+
+.remove-btn:hover {
+    color: #ff4d4d;
+}
+/* עיצוב כפתור התשלום - גרסה מדויקת */
+.checkout-btn {
+    background-color: #2d2d2d;      /* השחור המדויק מהתמונה */
+    color: #ffffff;                 /* טקסט לבן נקי */
+    display: block;                 /* מאפשר שליטה ברוחב ובמרכוז */
+    width: 85%;                    /* לא 100%, כדי שיהיה קטן יותר כמו בדוגמה */
+    max-width: 350px;               /* הגבלה למניעת התרחבות יתר במסכים גדולים */
+    margin: 25px auto 0;            /* מרכוז הכפתור (auto) ורווח מלמעלה */
+    padding: 14px 0;               /* גובה פנימי מעט יותר מעודן */
+    border: none;
+    border-radius: 12px;           /* עיגול פינות זהה לדף התשלום */
+    font-size: 16px;               /* גודל טקסט מאוזן */
+    font-weight: 600;              /* טקסט קצת יותר מודגש */
+    text-decoration: none;          /* ביטול קו תחתון של קישור */
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+/* 1. המיכל הראשי - מוודא שהוא במרכז ולא נמרח */
+.cart-container {
+    max-width: 550px;       /* מגביל את הרוחב כמו בדף התשלום */
+    margin: 40px auto;      /* ממרכז את כל התיבה בעמוד */
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 24px;    /* פינות מעוגלות מאוד */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    direction: rtl;         /* מבטיח שהטקסט והסידור יהיו נכונים לעברית */
+}
+
+/* 2. כותרת העגלה */
+.cart-title {
+    text-align: center;
+    color: #332211;
+    margin-bottom: 30px;
+    font-size: 24px;
 }
 
 
+/* 4. פרטי המוצר (טקסט) */
+.item-info {
+    flex-grow: 1;           /* לוקח את כל השטח הפנוי באמצע */
+    text-align: right;
+}
+
+/* 5. התמונה - שלא תהיה גדולה מדי */
+.product-img {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* 6. כפתור המחיקה */
+.remove-btn {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+}
+/* מיכל הסיכום בתחתית העגלה */
+.summary {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0; /* קו הפרדה עדין */
+}
+
+/* שורת סיכום (משלוח / סה"כ) */
+.summary-row {
+    display: flex;
+    justify-content: space-between; /* דוחף את הטקסט לימין ואת המחיר לשמאל */
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #666; /* צבע אפור עדין למשלוח */
+    direction: rtl; /* יישור לעברית */
+}
+
+/* עיצוב ספציפי לשורת ה-Total */
+.total-row {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #332211; /* הצבע החום הכהה מהכותרות שלך */
+}
+
+#final-price {
+    font-size: 22px;
+    color: #332211;
+}
+
+
+/* אפקט לחיצה/מעבר עכבר */
+.checkout-btn:hover {
+    background-color: #1a1a1a;
+    transform: scale(0.98);         /* אפקט לחיצה קטן */
+}
 
 .footer {
   text-align: center;

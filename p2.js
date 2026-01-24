@@ -102,62 +102,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
-
-// כאן אתן שמות את ה JS שלכן
-
-
-
-function updateCart() {
+// 1. הפונקציה שמחשבת ומעדכנת את המסך
+function updateCartTotal() {
     let total = 0;
-    const shippingPrice = 20;
-    
-    // וודאי שה-Class כאן תואם למה שכתבת ב-HTML (בחרתי .cart-item)
-    const items = document.querySelectorAll('.cart-item');
+    const shipping = 20;
 
-    items.forEach(item => {
-        const price = parseFloat(item.getAttribute('data-price'));
-        if (!isNaN(price)) {
-            total += price;
+    // מוצא את כל המחירים בעגלה
+    const prices = document.querySelectorAll('.price');
+    
+    prices.forEach(priceElement => {
+        // ניקוי סימנים והפיכה למספר
+        const priceValue = parseFloat(priceElement.innerText.replace(/[^\d.]/g, ''));
+        if (!isNaN(priceValue)) {
+            total += priceValue;
         }
     });
 
-    // חישוב המשלוח - אם יש פריטים יש משלוח, אם אין פריטים המשלוח הוא 0
-    const currentShipping = items.length > 0 ? shippingPrice : 0;
-    const finalTotal = total + currentShipping;
-
-    // שמירת המחיר הסופי למעבר לעמוד התשלום
-    localStorage.setItem('cartTotal', finalTotal); 
+    // חישוב סופי (משלוח רק אם יש מוצרים)
+    const finalAmount = total > 0 ? total + shipping : 0;
 
     // עדכון התצוגה ב-HTML
-    const shippingElement = document.getElementById('shipping-cost');
-    const totalElement = document.getElementById('total-sum');
-    const cartContainer = document.getElementById('cart-items');
+    const display = document.getElementById('final-price');
+    if (display) {
+        display.innerText = "$" + finalAmount.toLocaleString();
+    }
 
-    if (shippingElement) shippingElement.innerText = currentShipping + "$";
-    if (totalElement) totalElement.innerText = finalTotal + "$";
+    // שמירה לעמוד הבא
+    localStorage.setItem('cartTotal', finalAmount);
+}
 
-    // אם הסל ריק, הצגת הודעה
-    if (items.length === 0 && cartContainer) {
-        cartContainer.innerHTML = "<p style='text-align:center; padding: 20px;'>הסל ריק</p>";
+// 2. פונקציית המחיקה
+function removeItem(btn) {
+    const itemRow = btn.closest('.cart-item');
+    if (itemRow) {
+        itemRow.remove();
+        updateCartTotal(); // קריאה לחישוב מחדש
     }
 }
 
-// פונקציה למחיקת פריט
-function removeItem(button) {
-    const itemRow = button.closest('.cart-item');
-    if (itemRow) {
-        itemRow.remove();
-        updateCart(); // קריאה לפונקציה לעדכון המחיר אחרי המחיקה
-    }
-    document.addEventListener('DOMContentLoaded', () => {
+// 3. הפעלה בטעינה וקישור כפתור התשלום
+document.addEventListener('DOMContentLoaded', () => {
+    updateCartTotal(); // חישוב ראשוני
+
     const checkoutBtn = document.querySelector('.checkout-btn');
     if (checkoutBtn) {
         checkoutBtn.addEventListener('click', (e) => {
-            // זה יבטיח שהדפדפן יעבור לעמוד הנכון
             window.location.href = 'payment.html';
         });
     }
 });
-}
+    
+
 
