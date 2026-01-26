@@ -243,13 +243,18 @@ body {
 
 
 /*--signup design--*/
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 .page-content{
   padding: 40px 20px;
+  margin: auto;
 }
 
 .signup-box{
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   direction: ltr;
@@ -280,7 +285,7 @@ body {
 
 .page-content {
   max-width: 500px;
-  margin: 0 auto;
+  margin: auto;
   background: var(--white);
   padding: 30px;
   border-radius: 15px;
@@ -306,6 +311,50 @@ body {
 .button button:hover {
   background-color: var(--gold);
   transform: translateY(-1px);
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-box {
+  background: white;
+  padding: 25px 40px;
+  border-radius: 12px;
+  text-align: center;
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
 }
 
 .footer {

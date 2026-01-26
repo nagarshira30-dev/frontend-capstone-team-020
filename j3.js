@@ -106,22 +106,47 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// כאן אתן שמות את ה JS שלכן
+// signup JS
 
 document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("registerBtn");  // הכפתור
-  const passwordInput = document.getElementById("password"); // השדה
-  const message = document.getElementById("message");  // ההודעה
+  const btn = document.getElementById("registerBtn");
+  const passwordInput = document.getElementById("password");
+
+  const popup = document.getElementById("popup");
+  const popupText = document.getElementById("popupText");
+  const closePopup = document.getElementById("closePopup");
 
   btn.addEventListener("click", function () {
+
+    // checking for empty fields
+    const requiredInputs = document.querySelectorAll(
+      "form input[required]"
+    );
+
+    for (let input of requiredInputs) {
+      if (input.value.trim() === "") {
+        popupText.textContent = " please fill in all fields";
+        popupText.className = "error";
+        popup.classList.remove("hidden");
+        return; 
+      }
+    }
+
+    // checking passwors length
     const password = passwordInput.value;
 
     if (password.length < 8) {
-      message.textContent = "password is too short";
-      message.className = "error";
+      popupText.textContent = "password is too short";
+      popupText.className = "error";
     } else {
-      message.textContent = "you have signed up!";
-      message.className = "success";
+      popupText.textContent = "you have signed up!";
+      popupText.className = "success";
     }
+
+    popup.classList.remove("hidden");
+  });
+
+  closePopup.addEventListener("click", function () {
+    popup.classList.add("hidden");
   });
 });
