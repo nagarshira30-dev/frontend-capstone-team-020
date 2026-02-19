@@ -101,12 +101,13 @@
       <button class="searchbar__close" id="search-close">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <button class="searchbar__go">חפש</button>
-      <input type="text" class="searchbar__input" placeholder="חיפוש פריטים נדירים...">
+      <button class="searchbar__go">Search</button>
+      <input type="text" class="searchbar__input" placeholder="...Search for rare items">
     </div>
   </div>
 
 <!--signup code-->
+<div class="layout">
   <main class="page-content">
     <div class="signup-box">
      <form action="signup" method="post" autocomplete="on">
@@ -162,7 +163,6 @@
     </div>
   </main>
 
-
   <footer class="footer">
     <div class="footer__contact">
       <div>
@@ -190,6 +190,14 @@
       <p>©️ One of One — Find the Unfindable</p>
     </div>
   </footer>
+</div>
+
+  <div id="popup" class="popup hidden">
+  <div class="popup-box">
+    <p id="popupText"></p>
+    <button id="closePopup">OK</button>
+  </div>
+</div>
 
   <script src="j3.js"></script>
 
