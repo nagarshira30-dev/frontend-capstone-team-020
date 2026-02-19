@@ -111,11 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("registerBtn");
   const passwordInput = document.getElementById("password");
-
-  const popup = document.getElementById("popup");
-  const popupText = document.getElementById("popupText");
-  const closePopup = document.getElementById("closePopup");
-
   btn.addEventListener("click", function () {
 
     // checking for empty fields
