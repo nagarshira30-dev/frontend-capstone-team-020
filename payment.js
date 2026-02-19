@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// כאן אתן שמות את ה JS שלכן
+// js payment page
 
 
 
