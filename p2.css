@@ -104,13 +104,16 @@ body {
   align-items: center;
   justify-content: center;
 }
-.brand{
+
+
+  .brand {
   text-decoration: none;
   color: white;
   text-align: center;
   font-family: "Playfair Display", serif;
-
 }
+
+
 .brand > span{
   font-size: smaller;
 }
@@ -381,11 +384,7 @@ body {
 }
 
 
-/* אפקט לחיצה/מעבר עכבר */
-.checkout-btn:hover {
-    background-color: #1a1a1a;
-    transform: scale(0.98);         /* אפקט לחיצה קטן */
-}
+
 
 .footer {
   text-align: center;
