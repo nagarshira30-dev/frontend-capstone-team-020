@@ -1,3 +1,46 @@
+// --- מערכת מיון לפי מחיר ---
+const sortBtn = document.getElementById('sort-btn');
+const priceSortSelect = document.getElementById('price-sort');
+const productContainer = document.getElementById('product-container');
+
+if (sortBtn && priceSortSelect && productContainer) {
+    sortBtn.addEventListener('click', () => {
+        const sortBy = priceSortSelect.value;
+        if (sortBy === 'default') return;
+
+        // הופך את רשימת הכרטיסים למערך כדי שנוכל למיין אותם
+        const cards = Array.from(productContainer.querySelectorAll('.product-card'));
+
+        cards.sort((a, b) => {
+            // שולף את המחיר, מוריד סימנים כמו $ או ₪ והופך למספר
+            const priceA = parseFloat(a.querySelector('.price').innerText.replace(/[^0-9.-]+/g, ""));
+            const priceB = parseFloat(b.querySelector('.price').innerText.replace(/[^0-9.-]+/g, ""));
+
+            if (sortBy === 'low-to-high') {
+                return priceA - priceB;
+            } else {
+                return priceB - priceA;
+            }
+        });
+
+        // מנקה את הקונטיינר ומכניס את הכרטיסים לפי הסדר החדש
+        productContainer.innerHTML = "";
+        cards.forEach(card => productContainer.appendChild(card));
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // שליפת כל כפתורי ה-"Add to cart" שיש להם את ה-Class שראינו בקוד שלך
+    const addToCartButtons = document.querySelectorAll('.btn-add');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // הקפצת החלונית באנגלית
+            alert("Item added to cart successfully!");
+        });
+    });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // אלמנטים
     const menuToggle = document.getElementById('menu-toggle');
@@ -104,21 +147,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// js payment page
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    console.log("דף התשלום נטען בהצלחה!");
-
-    const form = document.getElementById('payment-form');
-    
-    if (form) {
-        form.onsubmit = function(e) {
-            e.preventDefault();
-            alert("התשלום בוצע בהצלחה!");
-            // המעבר חזרה לדף הבית או לסל
-            window.location.href = 'p2.html'; 
-        };
-    }
-});
