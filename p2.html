@@ -5,10 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>One of One — Find the Unfindable</title>
-
+<meta name="description" content="One Of One - Marketplace for rare and unique vintage items including furniture, collectibles and art. Discover and shop one of a kind pieces.">
 
   <link rel="stylesheet" href="p2.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -80,7 +84,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar__panel">
       <div class="sidebar__header">
-        <button class="sidebar__close" id="sidebar-close">
+        <button class="sidebar__close" id="sidebar-close" aria-label="סגירה">
           <i class="fa-solid fa-xmark"></i>
         </button>
         <span class="sidebar__title">Categories</span>
@@ -96,10 +100,10 @@
 
   <div class="searchbar" id="searchbar">
     <div class="searchbar__panel">
+      <button class="searchbar__close" id="search-close" aria-label="סגירת חיפוש">
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+</button>
 
-      <button class="searchbar__close" id="search-close">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
       <button class="searchbar__go">search</button>
       <input type="text" class="searchbar__input" placeholder="...search for rare items">
     </div>
@@ -163,8 +167,9 @@
         <p>and stay updated</p>
         <div>
           <input style="direction:ltr" type="text" placeholder="your email">
-          <button>
-            <i class="fa-solid fa-greater-than"></i>
+          <button 
+          type="button" aria-label="הרשמה לניוזלטר">
+            <i class="fa-solid fa-greater-than" aria-hidden="true"></i>
           </button>
         </div>
       </div>
