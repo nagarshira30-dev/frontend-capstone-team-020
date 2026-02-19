@@ -106,20 +106,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // js payment page
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
     console.log("דף התשלום נטען בהצלחה!");
 
-    const form = document.getElementById('payment-form');
-    
+    // 1. מוצאים את הכפתור
+    const payBtn = document.querySelector('.checkout-btn'); 
 
-    if (form) {
-        form.onsubmit = function(e) {
-            e.preventDefault();
-            z("התשלום בוצע בהצלחה!");
-            // המעבר חזרה לדף הבית או לסל
-            window.location.href = 'p2.html'; 
-        };
+    if (payBtn) {
+        payBtn.addEventListener('click', () => {
+            // 2. הקפצת ההודעה מיד בלחיצה
+            alert("Payment completed successfully!");
+            
+            // 3. מעבר לדף הבית
+            window.location.href = 'p2.html';
+        });
     }
 });
+
