@@ -135,13 +135,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const likesBtn = document.getElementById('likesBtn');
     if (likesBtn) {
         likesBtn.addEventListener('click', () => {
-            window.location.href = 'p4.html';
+            window.location.href = 'index.html';
         });
     }
     const likesMobileBtn = document.getElementById('likesMobileBtn');
     if (likesMobileBtn) {
         likesMobileBtn.addEventListener('click', () => {
-            window.location.href = 'p4.html';
+            window.location.href = 'index.html';
         });
     }
 });
