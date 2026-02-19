@@ -113,10 +113,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const form = document.getElementById('payment-form');
     
+
     if (form) {
         form.onsubmit = function(e) {
             e.preventDefault();
-            alert("התשלום בוצע בהצלחה!");
+            z("התשלום בוצע בהצלחה!");
             // המעבר חזרה לדף הבית או לסל
             window.location.href = 'p2.html'; 
         };
