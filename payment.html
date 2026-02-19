@@ -85,8 +85,7 @@
     <div class="sidebar__panel">
       <div class="sidebar__header">
         <button class="sidebar__close" id="sidebar-close" aria-label="סגירה">
-          <i class="fa-solid fa-xmark"> aria-hidden="true"</i>
-        </button>
+<i class="fa-solid fa-xmark" aria-hidden="true"></i> </button>        </button>
         <span class="sidebar__title">Categories</span>
       </div>
       <nav class="sidebar__nav">
@@ -100,10 +99,8 @@
 
   <div class="searchbar" id="searchbar">
     <div class="searchbar__panel">
-
-        <button class="searchbar__close" id="search-close" aria-label="סגירת חיפוש">
-    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-</button>
+      <button class="searchbar__close" id="search-close" aria-label="סגירת חיפוש">
+<i class="fa-solid fa-xmark" aria-hidden="true"></i>
       </button>
       <button class="searchbar__go">search</button>
       <input type="text" class="searchbar__input" placeholder="...search for rare items">
@@ -138,17 +135,15 @@
             <input type="text" placeholder="123" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
           </div>
         </div>
-
-
-       <button type="button" 
-        onclick="payNow()" 
-        class="checkout-btn" 
-        aria-label="Make a payment"
-        style="width: 100%; background: #5D3A2E; color: white; padding: 15px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">
+<button 
+  type="button" 
+  id="payNowBtn" 
+  class="checkout-btn" 
+  onclick="console.log('Clicked!'); alert('Payment completed successfully!'); window.location.href='p2.html';"
+  style="width: 100%; background: #5D3A2E; color: white; padding: 15px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">
     Make a payment
 </button>
-    
-
+  
       </form></div>
   </main>
 
@@ -168,8 +163,8 @@
         <p>and stay updated</p>
         <div>
           <input style="direction:ltr" type="text" placeholder="your email">
-          <button>
-            <type="button" aria-label="ניוזלייטר">
+             <button 
+          type="button" aria-label="הרשמה לניוזלטר">
             <i class="fa-solid fa-greater-than" aria-hidden="true"></i>
           </button>
         </div>
