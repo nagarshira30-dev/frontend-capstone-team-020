@@ -111,11 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("registerBtn");
   const passwordInput = document.getElementById("password");
-
-  const popup = document.getElementById("popup");
-  const popupText = document.getElementById("popupText");
-  const closePopup = document.getElementById("closePopup");
-
   btn.addEventListener("click", function () {
 
     // checking for empty fields
@@ -141,4 +136,12 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       popupText.textContent = "you have signed up!";
       popupText.className = "success";
-    }})})
+    }
+
+    popup.classList.remove("hidden");
+  });
+
+  closePopup.addEventListener("click", function () {
+    popup.classList.add("hidden");
+  });
+});
