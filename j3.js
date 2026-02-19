@@ -1,3 +1,5 @@
+console.log("JS מחובר");
+
 document.addEventListener('DOMContentLoaded', () => {
     // אלמנטים
     const menuToggle = document.getElementById('menu-toggle');
@@ -102,55 +104,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-// 1. הפונקציה שמחשבת ומעדכנת את המסך
-function updateCartTotal() {
-    let total = 0;
-    const shipping = 20;
 
-    // מוצא את כל המחירים בעגלה
-    const prices = document.querySelectorAll('.price');
-    
-    prices.forEach(priceElement => {
-        // ניקוי סימנים והפיכה למספר
-        const priceValue = parseFloat(priceElement.innerText.replace(/[^\d.]/g, ''));
-        if (!isNaN(priceValue)) {
-            total += priceValue;
-        }
-    });
 
-    // חישוב סופי (משלוח רק אם יש מוצרים)
-    const finalAmount = total > 0 ? total + shipping : 0;
+// signup JS
 
-    // עדכון התצוגה ב-HTML
-    const display = document.getElementById('final-price');
-    if (display) {
-        display.innerText = "$" + finalAmount.toLocaleString();
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("registerBtn");
+  const passwordInput = document.getElementById("password");
+  btn.addEventListener("click", function () {
+
+    // checking for empty fields
+    const requiredInputs = document.querySelectorAll(
+      "form input[required]"
+    );
+
+    for (let input of requiredInputs) {
+      if (input.value.trim() === "") {
+        popupText.textContent = " please fill in all fields";
+        popupText.className = "error";
+        popup.classList.remove("hidden");
+        return; 
+      }
     }
 
-    // שמירה לעמוד הבא
-    localStorage.setItem('cartTotal', finalAmount);
-}
+    // checking passwors length
+    const password = passwordInput.value;
 
-// 2. פונקציית המחיקה
-function removeItem(btn) {
-    const itemRow = btn.closest('.cart-item');
-    if (itemRow) {
-        itemRow.remove();
-        updateCartTotal(); // קריאה לחישוב מחדש
+    if (password.length < 8) {
+      popupText.textContent = "password is too short";
+      popupText.className = "error";
+    } else {
+      popupText.textContent = "you have signed up!";
+      popupText.className = "success";
     }
-}
 
-// 3. הפעלה בטעינה וקישור כפתור התשלום
-document.addEventListener('DOMContentLoaded', () => {
-    updateCartTotal(); // חישוב ראשוני
+    popup.classList.remove("hidden");
+  });
 
-    const checkoutBtn = document.querySelector('.checkout-btn');
-    if (checkoutBtn) {
-        checkoutBtn.addEventListener('click', (e) => {
-            window.location.href = 'payment.html';
-        });
-    }
+  closePopup.addEventListener("click", function () {
+    popup.classList.add("hidden");
+  });
 });
-    
-
-

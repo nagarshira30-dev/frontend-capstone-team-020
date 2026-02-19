@@ -5,7 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>One of One — Find the Unfindable</title>
+<meta name="description" content="One Of One - Marketplace for rare and unique vintage items including furniture, collectibles and art. Discover and shop one of a kind pieces.">
 
+<link rel="stylesheet" href="p2.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link rel="stylesheet" href="p2.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -19,10 +23,10 @@
         <button class="icon-btn" id="menu-toggle" aria-label="תפריט">
           <i class="fa-solid fa-bars"></i>
         </button>
-        <button class="icon-btn" id="search-toggle" aria-label="חיפוש">
+        <button class="icon-btn" id="search-toggle" aria-label="search">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
-        <button class="icon-btn" id="dark-mode-toggle" aria-label="חיפוש">
+        <button class="icon-btn" id="dark-mode-toggle" aria-label="search">
           <i id="dark-mode" class="fa-solid fa-moon"></i>
         </button>
       </div>
@@ -80,8 +84,8 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar__panel">
       <div class="sidebar__header">
-        <button class="sidebar__close" id="sidebar-close">
-          <i class="fa-solid fa-xmark"></i>
+        <button class="sidebar__close" id="sidebar-close" aria-label="סגירה">
+          <i class="fa-solid fa-xmark"> aria-hidden="true"</i>
         </button>
         <span class="sidebar__title">Categories</span>
       </div>
@@ -97,11 +101,12 @@
   <div class="searchbar" id="searchbar">
     <div class="searchbar__panel">
 
-      <button class="searchbar__close" id="search-close">
-        <i class="fa-solid fa-xmark"></i>
+        <button class="searchbar__close" id="search-close" aria-label="סגירת חיפוש">
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+</button>
       </button>
-      <button class="searchbar__go">חפש</button>
-      <input type="text" class="searchbar__input" placeholder="חיפוש פריטים נדירים...">
+      <button class="searchbar__go">search</button>
+      <input type="text" class="searchbar__input" placeholder="...search for rare items">
     </div>
     </div>
 
@@ -110,22 +115,22 @@
 
 <main style="padding: 40px 20px;">
     <div class="cart-container" style="max-width: 500px; margin: 0 auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-      <h2 style="text-align: center; margin-bottom: 25px;">פרטי תשלום</h2>
+      <h2 style="text-align: center; margin-bottom: 25px;">Payment Details</h2>
       
       <form id="payment-form">
         <div style="margin-bottom: 15px;">
-          <label style="display: block; margin-bottom: 5px;">שם בעל הכרטיס</label>
+          <label style="display: block; margin-bottom: 5px;">name</label>
           <input type="text" placeholder="ישראל ישראלי" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
         </div>
 
         <div style="margin-bottom: 15px;">
-          <label style="display: block; margin-bottom: 5px;">מספר כרטיס</label>
+          <label style="display: block; margin-bottom: 5px;">Card Number</label>
           <input type="text" placeholder="**** **** **** ****" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
         </div>
 
         <div style="display: flex; gap: 15px; margin-bottom: 20px;">
           <div style="flex: 1;">
-            <label style="display: block; margin-bottom: 5px;">תוקף</label>
+            <label style="display: block; margin-bottom: 5px;">Expiry Date</label>
             <input type="text" placeholder="MM/YY" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
           </div>
           <div style="flex: 1;">
@@ -134,11 +139,17 @@
           </div>
         </div>
 
-        <button type="submit" class="checkout-btn" style="width: 100%; background: #333; color: white; padding: 15px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">
-          בצע תשלום
-        </button>
-      </form>
-    </div>
+
+       <button type="button" 
+        onclick="payNow()" 
+        class="checkout-btn" 
+        aria-label="Make a payment"
+        style="width: 100%; background: #5D3A2E; color: white; padding: 15px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">
+    Make a payment
+</button>
+    
+
+      </form></div>
   </main>
 
   <footer class="footer">
@@ -158,7 +169,8 @@
         <div>
           <input style="direction:ltr" type="text" placeholder="your email">
           <button>
-            <i class="fa-solid fa-greater-than"></i>
+            <type="button" aria-label="ניוזלייטר">
+            <i class="fa-solid fa-greater-than" aria-hidden="true"></i>
           </button>
         </div>
       </div>
@@ -169,7 +181,7 @@
     </div>
   </footer>
 
-  <script src="p2.js"></script>
+  <script src="p2.js" defer></script>
 
 </body>
 

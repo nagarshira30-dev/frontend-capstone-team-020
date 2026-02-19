@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
 
-  <link rel="stylesheet" href="page2.css" />
+  <link rel="stylesheet" href="p5.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
@@ -22,16 +22,16 @@
   <header class="topbar">
     <div class="topbar__inner">
       <div class="topbar__right">
-    <button class="icon-btn" id="menu-toggle" aria-label="תפריט">
-        <i class="fa-solid fa-bars"></i>
-    </button>
-    <button class="icon-btn" id="search-toggle" aria-label="חיפוש">
-        <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
-    <button class="icon-btn" id="dark-mode-toggle" aria-label="מצב כהה">
-        <i id="dark-mode" class="fa-solid fa-moon"></i>
-    </button>
-</div>
+        <button class="icon-btn" id="menu-toggle" aria-label="תפריט">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <button class="icon-btn" id="search-toggle" aria-label="חיפוש">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="icon-btn" id="dark-mode-toggle" aria-label="חיפוש">
+          <i id="dark-mode" class="fa-solid fa-moon"></i>
+        </button>
+      </div>
 
       <div class="brand__logo">
         <a class="brand" href="p4.html">
@@ -87,8 +87,8 @@
     <div class="sidebar__panel">
       <div class="sidebar__header">
         <button class="sidebar__close" id="sidebar-close" aria-label="סגירה">
-          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-        </button>
+          <i class="fa-solid fa-xmark" aria-hidden="true" ></i>
+        </button> 
         <span class="sidebar__title">Categories</span>
       </div>
       <nav class="sidebar__nav">
@@ -103,8 +103,8 @@
   <div class="searchbar" id="searchbar">
     <div class="searchbar__panel">
 
-      <button class="searchbar__close" id="search-close">
-        <i class="fa-solid fa-xmark"></i>
+      <button class="searchbar__close" id="search-close" aria-label="סגירת חיפוש">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
       </button>
       <button class="searchbar__go">Search</button>
       <input type="text" class="searchbar__input" placeholder="...Search for rare items">
@@ -115,24 +115,24 @@
   <main>
         <section class="filters" aria-label="מערכת מיון מחירים">
     <div class="filter-group">
-        <label for="price-sort">Filter</label>
+        <label for="price-sort">Filter:</label>
         <select id="price-sort">
             <option value="default">-- Choose --</option>
             <option value="low-to-high">Price: Low to High</option>
             <option value="high-to-low">Price: High to Low</option>
         </select>
-        <button id="sort-btn" class="btn-primary">Fiter items</button>
+        <button id="sort-btn" class="btn-primary">Filter items</button>
     </div>
-        </section>
+</section>
 
      <div class="product-grid" id="product-container">
     
-    <article class="product-card" data-category="clothing">
+    <article class="product-card" data-category="furniture">
         <div class="badge rarity">Rare</div>
-        <img src="./jaket.png" alt="מעיל צמר וינטג'">
+        <img src="./chair.png" alt="כיסא וינטג'">
         <div class="card-content">
-            <h3>1970s Classic Leather Biker</h3>
-            <p class="price">5,000$</p>
+            <h3>Classic Velvet chair</h3>
+            <p class="price">10,000$</p>
             <div class="actions">
                 <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
                 <button class="btn-add" aria-label="הוסף לעגלה">Add to cart</button>
@@ -140,11 +140,11 @@
         </div>
     </article>
 
-    <article class="product-card" data-category="clothing">
-        <img src="./skirt.png" alt="חצאית">
+    <article class="product-card" data-category="furniture">
+        <img src="./candlesticks.png" alt="נרות">
         <div class="card-content">
-            <h3>Retro Floral Pleated Skirt</h3>
-            <p class="price">6,500$</p>
+            <h3>Luxury Candles</h3>
+            <p class="price">2,200$</p>
             <div class="actions">
                 <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
                 <button class="btn-add" aria-label="הוסף לעגלה">Add to cart</button>
@@ -152,11 +152,11 @@
         </div>
     </article>
 
-    <article class="product-card" data-category="clothing">
-        <img src="./dress.png" alt="שמלת פשתן בז'">
+    <article class="product-card" data-category="furniture">
+        <img src="./buffet.png" alt="  מזנון'">
         <div class="card-content">
-            <h3>Timeless Linen Midi Dress</h3>
-            <p class="price">30,000$</p>
+            <h3>Wooden Heritage Buffet</h3>
+            <p class="price">24,000$</p>
             <div class="actions">
                 <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
                 <button class="btn-add" aria-label="הוסף לעגלה">Add to cart</button>
@@ -164,12 +164,12 @@
         </div>
     </article>
 
-    <article class="product-card" data-category="clothing">
+    <article class="product-card" data-category="furniture">
         <div class="badge out-of-stock">not available</div>
-        <img src="./shoes.png" alt="נעליים">
+        <img src="./mirror.png" alt="מראה">
         <div class="card-content">
-            <h3>Elegant Vintage Mary Janes</h3>
-            <p class="price">₪15,000$</p>
+            <h3>Golden Antique Mirror</h3>
+            <p class="price">₪55,000$</p>
             <div class="actions">
                 <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
                 <button class="btn-add disabled" disabled>Sold out</button>
@@ -177,11 +177,11 @@
         </div>
     </article>
 
-    <article class="product-card" data-category="clothing">
-        <img src="./shirt.png" alt="חולצה מעוצבת">
+    <article class="product-card" data-category="furniture">
+        <img src="./picture.png" alt="תמונה">
         <div class="card-content">
-            <h3>Artisan Embroidered Silk Blouse</h3>
-            <p class="price">2,300$</p>
+            <h3>Vintage Framed Art</h3>
+            <p class="price">7,700$</p>
             <div class="actions">
                 <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
                 <button class="btn-add" aria-label="הוסף לעגלה">Add to cart</button>
@@ -189,11 +189,11 @@
         </div>
     </article>
 
-    <article class="product-card" data-category="clothing">
-        <img src="./pents.png" alt="מכנסיים">
+    <article class="product-card" data-category="furniture">
+        <img src="./waza.png" alt="ואזה">
         <div class="card-content">
-            <h3>High-Waisted Tailored Trousers</h3>
-            <p class="price">1,400$</p>
+            <h3>vintage vase</h3>
+            <p class="price">5,400$</p>
             <div class="actions">
                 <button class="btn-wishlist" aria-label="הוסף ל-Wishlist">❤</button>
                 <button class="btn-add" aria-label="הוסף לעגלה">Add to cart</button>
@@ -221,7 +221,7 @@
         <p>and stay updated</p>
         <div>
           <input style="direction:ltr" type="text" placeholder="your email">
-          <button type="button" aria-label="ניוזליטר"></button>>
+          <button type="button" aria-label="ניוזליטר">
             <i class="fa-solid fa-greater-than" aria-hidden="true"></i>
           </button>
         </div>
@@ -234,7 +234,7 @@
     </div>
   </footer>
 
-  <script src="page2.js" defer></script>
+  <script src="p5.js" defer></script>
 
 </body>
 

@@ -1,4 +1,5 @@
 
+
 /* הגדרות צבעים ומשתנים */
 :root {
   --bg-main: #fdfdfb;       /* לבן שמנת */
@@ -239,92 +240,87 @@ body {
   display:none;
 }
 
-/* --- Hero & Card --- */
-.hero {
-  min-height: 60vh;
+
+
+/*--signup design--*/
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-box{
+  display: flex;
+  flex-direction: column;
+  direction: ltr;
+  align-items: left;
+}
+
+.form-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-}
-
-.card {
-  background: white;
-  padding: 50px 40px;
-  border-radius: var(--radius-xl);
-  text-align: center;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
-  border: 1px solid var(--accent-beige);
-  max-width: 900px; /* הגדלתי כדי שיהיה מקום למשפט */
-  width: fit-content; /* מתאים את עצמו לתוכן */
-  position: relative;
-  
-}
-
-.card__title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  color: var(--primary-brown);
-  margin-bottom: 15px;
-  white-space: nowrap; /* מונע ירידת שורה */
-  font-family: "Heebo", sans-serif;
-   font-weight: 600;        /* במקום 700/800 */
-  letter-spacing: 0.5px; 
-
-  
-}
-
-.gold {
-  color: var(--gold);
-  font-weight: 900;
-    font-family: "Playfair Display", serif;
-}
-
-.card__subtitle {
-  font-size: 1.2rem;
-  opacity: 0.75;
-  margin-bottom: 30px;
-  font-family: "Playfair Display", serif;
-    letter-spacing: 1px;
-
-}
-.card__content{
-  direction: ltr;
-  margin-bottom: 30px;
-  color: var(--primary-brown);
-    font-family: "Heebo", sans-serif;
-
-}
-
-.btn--primary {
-  display: inline-block;
-  padding: 15px 40px;
-  background: var(--primary-brown);
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn--primary:hover {
-  background: var(--gold);
-  transform: translateY(-3px);
-}
-
-.card__chips {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
   gap: 12px;
 }
 
-.chip {
-  background: #f4f1ea;
-  color: var(--primary-brown);
-  padding: 6px 18px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
+.form-row label {
+ text-align: left;
+  margin-bottom: 35px;
+  width: 120px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-row input {
+   width: 100%;
+  padding: 12px;
+  border: 1px solid var(--accent-beige);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.page-content {
+  margin: auto;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--light-brown);    
+  direction: ltr;
+}
+
+.button {
+  text-align: center; 
+  margin-top: 20px;
+}
+
+.button button {
+  padding: 10px 30px;    
+  background: var(--primary-brown);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  display: inline-block;  
+}
+
+.button button:hover {
+  background-color: var(--gold);
+  transform: translateY(-1px);
+}
+
+.popup { 
+  position: fixed;
+   top: 20%; 
+   left: 50%; 
+   transform: translateX(-50%);
+   padding: 10px; 
+   background: inherit; 
+   border: 1px solid #ccc; 
+   box-shadow: none; 
+   backdrop-filter: none; 
+   z-index: 10000; }
+
+.hidden {
+  display: none;
 }
 
 .footer {
@@ -390,13 +386,14 @@ body {
 @media (max-width: 1024px) {
   .topbar__inner { max-width: 100%; }
   .card__title { font-size: 3rem; }
+  .signup-box { max-width: 720px; }
 }
 
 @media (max-width: 768px) {
   .card { padding: 35px 25px; max-width: 95%; }
   .card__title { 
     font-size: 2.2rem; 
-    white-space: normal; /* בטאבלט ומטה נרצה שיעלה שורה אם אין ברירה */
+    white-space: normal; 
   }
 }
 
@@ -411,6 +408,20 @@ body {
   #caret-mobile{
     display: initial;
   }
+
+  .signup-box {
+    max-width: 100%;
+    padding: 20px;
+  }
+  .form-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .form-row label {
+    width: 100%;
+    margin-bottom: 6px;
+  }
+
   .footer__contact{
     flex-direction: column;
     align-items: center;

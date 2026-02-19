@@ -1,3 +1,47 @@
+
+  // --- מערכת מיון לפי מחיר ---
+const sortBtn = document.getElementById('sort-btn');
+const priceSortSelect = document.getElementById('price-sort');
+const productContainer = document.getElementById('product-container');
+
+if (sortBtn && priceSortSelect && productContainer) {
+    sortBtn.addEventListener('click', () => {
+        const sortBy = priceSortSelect.value;
+        if (sortBy === 'default') return;
+
+        // הופך את רשימת הכרטיסים למערך כדי שנוכל למיין אותם
+        const cards = Array.from(productContainer.querySelectorAll('.product-card'));
+
+        cards.sort((a, b) => {
+            // שולף את המחיר, מוריד סימנים כמו $ או ₪ והופך למספר
+            const priceA = parseFloat(a.querySelector('.price').innerText.replace(/[^0-9.-]+/g, ""));
+            const priceB = parseFloat(b.querySelector('.price').innerText.replace(/[^0-9.-]+/g, ""));
+
+            if (sortBy === 'low-to-high') {
+                return priceA - priceB;
+            } else {
+                return priceB - priceA;
+            }
+        });
+
+        // מנקה את הקונטיינר ומכניס את הכרטיסים לפי הסדר החדש
+        productContainer.innerHTML = "";
+        cards.forEach(card => productContainer.appendChild(card));
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // שליפת כל כפתורי ה-"Add to cart" שיש להם את ה-Class שראינו בקוד שלך
+    const addToCartButtons = document.querySelectorAll('.btn-add');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // הקפצת החלונית באנגלית
+            alert("Item added to cart successfully!");
+        });
+    });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // אלמנטים
     const menuToggle = document.getElementById('menu-toggle');
@@ -102,55 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-// 1. הפונקציה שמחשבת ומעדכנת את המסך
-function updateCartTotal() {
-    let total = 0;
-    const shipping = 20;
-
-    // מוצא את כל המחירים בעגלה
-    const prices = document.querySelectorAll('.price');
-    
-    prices.forEach(priceElement => {
-        // ניקוי סימנים והפיכה למספר
-        const priceValue = parseFloat(priceElement.innerText.replace(/[^\d.]/g, ''));
-        if (!isNaN(priceValue)) {
-            total += priceValue;
-        }
-    });
-
-    // חישוב סופי (משלוח רק אם יש מוצרים)
-    const finalAmount = total > 0 ? total + shipping : 0;
-
-    // עדכון התצוגה ב-HTML
-    const display = document.getElementById('final-price');
-    if (display) {
-        display.innerText = "$" + finalAmount.toLocaleString();
-    }
-
-    // שמירה לעמוד הבא
-    localStorage.setItem('cartTotal', finalAmount);
-}
-
-// 2. פונקציית המחיקה
-function removeItem(btn) {
-    const itemRow = btn.closest('.cart-item');
-    if (itemRow) {
-        itemRow.remove();
-        updateCartTotal(); // קריאה לחישוב מחדש
-    }
-}
-
-// 3. הפעלה בטעינה וקישור כפתור התשלום
-document.addEventListener('DOMContentLoaded', () => {
-    updateCartTotal(); // חישוב ראשוני
-
-    const checkoutBtn = document.querySelector('.checkout-btn');
-    if (checkoutBtn) {
-        checkoutBtn.addEventListener('click', (e) => {
-            window.location.href = 'payment.html';
-        });
-    }
-});
-    
 
 
+// כאן אתן שמות את ה JS שלכן

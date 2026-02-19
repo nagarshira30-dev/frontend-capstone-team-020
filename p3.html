@@ -1,12 +1,206 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="he" dir="rtl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One of One — Find the Unfindable</title>
+
+<meta name="description" content="One Of One - Marketplace for rare and unique vintage items including furniture, collectibles and art. Discover and shop one of a kind pieces.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="signup.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
-    <h1>fml</h1>
-    <h2>123456</h2>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__right">
+        <button class="icon-btn" id="menu-toggle" aria-label="תפריט">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <button class="icon-btn" id="search-toggle" aria-label="חיפוש">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="icon-btn" id="dark-mode-toggle" aria-label="חיפוש">
+          <i id="dark-mode" class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+
+      <div class="brand__logo">
+        <a class="brand" href="p4.html">
+          <h3>One Of One</h3>
+          <span>Find The Unfindable</span>
+        </a>
+      </div>
+
+
+      <div class="topbar__left">
+        <button id="cartBtn" class="icon-btn" aria-label="עגלה">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <a href="/p2.html"></a>
+        </button>
+
+        <button id="likesBtn" class="icon-btn" aria-label="מועדפים">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+
+        <button id="loginBtn" class="icon-btn " aria-label="התחברות">
+          <i class="fa-solid fa-user"></i>
+        </button>
+      </div>
+      <button id="caret-mobile" class="icon-btn " aria-label="התחברות">
+        <i class="fa-solid fa-caret-down"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu-container">
+    <div class="mobile-menu">
+      <button id="cartMobileBtn" class="icon-btn" aria-label="עגלה">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
+
+      <button id="likesMobileBtn" class="icon-btn" aria-label="מועדפים">
+        <i class="fa-solid fa-heart"></i>
+      </button>
+
+      <button id="loginMobileBtn" class="icon-btn " aria-label="התחברות">
+        <i class="fa-solid fa-user"></i>
+        <a href="/p3.html"></a>
+      </button>
+      <button class="icon-btn" id="search-toggle-mobile" aria-label="חיפוש">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <button class="icon-btn" id="dark-mode-toggle-mobile" aria-label="חיפוש">
+        <i id="dark-mode" class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </div>
+  
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__panel">
+      <div class="sidebar__header">
+        <button class="sidebar__close" id="sidebar-close" aria-label="סגירה">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <span class="sidebar__title">Categories</span>
+      </div>
+      <nav class="sidebar__nav">
+        <a href="p1.html">Clothes</a>
+        <a href="p5.html">Design</a>
+        <a href="p4.html">Sale</a>
+      </nav>
+    </div>
+  </aside>
+
+
+  <div class="searchbar" id="searchbar">
+    <div class="searchbar__panel">
+
+      <button class="searchbar__close" id="search-close" aria-label="סגירת חיפוש">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <button class="searchbar__go">Search</button>
+      <input type="text" class="searchbar__input" placeholder="...Search for rare items">
+    </div>
+  </div>
+
+<!--signup code-->
+<div class="layout">
+  <main class="page-content">
+    <div class="signup-box">
+     <form action="signup" method="post" autocomplete="on">
+      
+            <div class="form-row">
+                <label for="name" >Full name:</label>
+                <input type="text" name="name" required autocomplete="name" placeholder="Israel Israeli">
+            </div>
+
+            <div class="form-row">  
+                <label for="email">Email:</label>
+                <input type="text" name="email" required autocomplete="email">
+            </div>
+
+            <div class="form-row">
+            <label for="new password">Password: </label>
+            <input type="password" id="password" name="password">
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Phone number:</label>
+              <input type="int" name="phone" required autocomplete="phone number">
+            </div>
+
+            
+            <div class="form-row">
+              <label for="city">City:</label>
+              <input type="text" name="city" required autocomplete="address-level2">
+            </div>
+
+            <div class="form-row">
+              <label for="street">Street:</label>
+              <input type="text" name="street"required autocomplete="street-address">
+            </div>
+
+            <div class="form-row">
+              <label for="house number">House number:</label>
+              <input type="text" name="house number" required autocomplete="house number">
+            </div>
+
+            <div class="form-row">
+              <label for="zip">Zip:<code></code></label>
+              <input type="text" name="zip" required autocomplete="postal-code">
+            </div>
+           
+           
+            <div class="button">
+              <button type="button" id="registerBtn">Signup</button>
+              <p id="message"></p>
+            </div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contact">
+      <div>
+        <h3>Customer service</h3>
+        <p>Sunday to Thrusday: 09:00 - 17:00</p>
+      </div>
+      <div class="footer__contact__middle">
+        <i aria-hidden="true" class="fab fa-facebook-f"></i>
+        <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+        <i aria-hidden="true" class="fab fa-instagram"></i>
+      </div>
+      <div class="footer__contact__newsletter">
+        <p>Register the newsletter</p>
+        <p>and stay updated</p>
+        <div>
+          <input style="direction:ltr" type="text" placeholder="your email">
+          <button type="button" aria-label="ניוזליטר">
+            <i class="fa-solid fa-greater-than" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright">
+
+      <p>©️ One of One — Find the Unfindable</p>
+    </div>
+  </footer>
+</div>
+
+</div>
+
+  <script src="j3.js" defer></script>
+
 </body>
+
 </html>
