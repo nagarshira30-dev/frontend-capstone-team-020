@@ -111,37 +111,26 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("registerBtn");
   const passwordInput = document.getElementById("password");
+
   btn.addEventListener("click", function () {
 
     // checking for empty fields
-    const requiredInputs = document.querySelectorAll(
-      "form input[required]"
-    );
+    const requiredInputs = document.querySelectorAll("form input[required]");
 
     for (let input of requiredInputs) {
       if (input.value.trim() === "") {
-        popupText.textContent = " please fill in all fields";
-        popupText.className = "error";
-        popup.classList.remove("hidden");
-        return; 
+        alert("Please fill in all fields");
+        return;
       }
     }
 
-    // checking passwors length
+    // checking password length
     const password = passwordInput.value;
 
     if (password.length < 8) {
-      popupText.textContent = "password is too short";
-      popupText.className = "error";
+      alert("Password is too short");
     } else {
-      popupText.textContent = "you have signed up!";
-      popupText.className = "success";
+      alert("You have signed up!");
     }
-
-    popup.classList.remove("hidden");
-  });
-
-  closePopup.addEventListener("click", function () {
-    popup.classList.add("hidden");
   });
 });
