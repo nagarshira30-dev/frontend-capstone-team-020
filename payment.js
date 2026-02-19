@@ -92,13 +92,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const likesBtn = document.getElementById('likesBtn');
     if (likesBtn) {
         likesBtn.addEventListener('click', () => {
-            window.location.href = 'p4.html';
+            window.location.href = 'index.html';
         });
     }
     const likesMobileBtn = document.getElementById('likesMobileBtn');
     if (likesMobileBtn) {
         likesMobileBtn.addEventListener('click', () => {
-            window.location.href = 'p4.html';
+            window.location.href = 'index.html';
         });
     }
 });
@@ -199,13 +199,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const likesBtn = document.getElementById('likesBtn');
     if (likesBtn) {
         likesBtn.addEventListener('click', () => {
-            window.location.href = 'p4.html';
+            window.location.href = 'index.html';
         });
     }
     const likesMobileBtn = document.getElementById('likesMobileBtn');
     if (likesMobileBtn) {
         likesMobileBtn.addEventListener('click', () => {
-            window.location.href = 'p4.html';
+            window.location.href = 'index.html';
         });
     }
 });
@@ -223,7 +223,6 @@ function handlePaymentProcess(e) {
     console.log("Payment logic triggered!");
     alert("Payment completed successfully!");
     
-    // מעבר לדף (שימי לב שזה אותו דף p2, ודאי שזה מה שרצית)
     window.location.href = 'p2.html';
     return false;
 }
