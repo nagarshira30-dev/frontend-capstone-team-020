@@ -86,9 +86,9 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar__panel">
       <div class="sidebar__header">
-        <button class="sidebar__close" id="sidebar-close">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
+        <button class="sidebar__close" id="sidebar-close" aria-label="סגירה">
+          <i class="fa-solid fa-xmark" aria-hidden="true" ></i>
+        </button> 
         <span class="sidebar__title">Categories</span>
       </div>
       <nav class="sidebar__nav">
@@ -103,8 +103,8 @@
   <div class="searchbar" id="searchbar">
     <div class="searchbar__panel">
 
-      <button class="searchbar__close" id="search-close">
-        <i class="fa-solid fa-xmark"></i>
+      <button class="searchbar__close" id="search-close" aria-label="סגירת חיפוש">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
       </button>
       <button class="searchbar__go">Search</button>
       <input type="text" class="searchbar__input" placeholder="...Search for rare items">
@@ -221,8 +221,8 @@
         <p>and stay updated</p>
         <div>
           <input style="direction:ltr" type="text" placeholder="your email">
-          <button>
-            <i class="fa-solid fa-greater-than"></i>
+          <button type="button" aria-label="ניוזליטר">
+            <i class="fa-solid fa-greater-than" aria-hidden="true"></i>
           </button>
         </div>
       </div>
@@ -234,7 +234,7 @@
     </div>
   </footer>
 
-  <script src="p5.js"></script>
+  <script src="p5.js" defer></script>
 
 </body>
 
