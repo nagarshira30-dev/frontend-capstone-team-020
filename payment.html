@@ -139,8 +139,16 @@
           </div>
         </div>
 
-        <button type="submit" class="checkout-btn" style="width: 100%; background: #5D3A2E; color: white; padding: 15px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">
-Make a Payment      </button>
+
+       <button type="button" 
+        onclick="payNow()" 
+        class="checkout-btn" 
+        aria-label="Make a payment"
+        style="width: 100%; background: #5D3A2E; color: white; padding: 15px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">
+    Make a payment
+</button>
+    
+
       </form></div>
   </main>
 
@@ -161,7 +169,7 @@ Make a Payment      </button>
         <div>
           <input style="direction:ltr" type="text" placeholder="your email">
           <button>
-            <type="button" aria-label="הרשמה לניוזלטר">
+            <type="button" aria-label="ניוזלייטר">
             <i class="fa-solid fa-greater-than" aria-hidden="true"></i>
           </button>
         </div>
@@ -173,7 +181,7 @@ Make a Payment      </button>
     </div>
   </footer>
 
-  <script src="p2.js"></script>
+  <script src="p2.js" defer></script>
 
 </body>
 
