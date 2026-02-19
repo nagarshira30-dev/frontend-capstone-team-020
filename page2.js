@@ -1,4 +1,45 @@
-console.log("JS מחובר");
+// --- מערכת מיון לפי מחיר ---
+const sortBtn = document.getElementById('sort-btn');
+const priceSortSelect = document.getElementById('price-sort');
+const productContainer = document.getElementById('product-container');
+
+if (sortBtn && priceSortSelect && productContainer) {
+    sortBtn.addEventListener('click', () => {
+        const sortBy = priceSortSelect.value;
+        if (sortBy === 'default') return;
+
+        // הופך את רשימת הכרטיסים למערך כדי שנוכל למיין אותם
+        const cards = Array.from(productContainer.querySelectorAll('.product-card'));
+
+        cards.sort((a, b) => {
+            // שולף את המחיר, מוריד סימנים כמו $ או ₪ והופך למספר
+            const priceA = parseFloat(a.querySelector('.price').innerText.replace(/[^0-9.-]+/g, ""));
+            const priceB = parseFloat(b.querySelector('.price').innerText.replace(/[^0-9.-]+/g, ""));
+
+            if (sortBy === 'low-to-high') {
+                return priceA - priceB;
+            } else {
+                return priceB - priceA;
+            }
+        });
+
+        // מנקה את הקונטיינר ומכניס את הכרטיסים לפי הסדר החדש
+        productContainer.innerHTML = "";
+        cards.forEach(card => productContainer.appendChild(card));
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // שליפת כל כפתורי ה-"Add to cart" שיש להם את ה-Class שראינו בקוד שלך
+    const addToCartButtons = document.querySelectorAll('.btn-add');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // הקפצת החלונית באנגלית
+            alert("Item added to cart successfully!");
+        });
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     // אלמנטים
@@ -106,39 +147,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// signup JS
-
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("registerBtn");
-  const passwordInput = document.getElementById("password");
-
-  const popup = document.getElementById("popup");
-  const popupText = document.getElementById("popupText");
-  const closePopup = document.getElementById("closePopup");
-
-  btn.addEventListener("click", function () {
-
-    // checking for empty fields
-    const requiredInputs = document.querySelectorAll(
-      "form input[required]"
-    );
-
-    for (let input of requiredInputs) {
-      if (input.value.trim() === "") {
-        popupText.textContent = " please fill in all fields";
-        popupText.className = "error";
-        popup.classList.remove("hidden");
-        return; 
-      }
-    }
-
-    // checking passwors length
-    const password = passwordInput.value;
-
-    if (password.length < 8) {
-      popupText.textContent = "password is too short";
-      popupText.className = "error";
-    } else {
-      popupText.textContent = "you have signed up!";
-      popupText.className = "success";
-    }})})
