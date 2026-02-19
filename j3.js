@@ -141,12 +141,4 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       popupText.textContent = "you have signed up!";
       popupText.className = "success";
-    }
-
-    popup.classList.remove("hidden");
-  });
-
-  closePopup.addEventListener("click", function () {
-    popup.classList.add("hidden");
-  });
-});
+    }})})
